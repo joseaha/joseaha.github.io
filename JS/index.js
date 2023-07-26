@@ -8,13 +8,13 @@ function handleCheckBoxChange() {
             item.classList.add('animate__bounceInRight');
         });
     } else {
-        const navItems = document.querySelectorAll('.nav-item');
+        const navItems = document.querySelectorAll('.nav_item');
         navItems.forEach((item) => {
             item.classList.remove('animate__bounceInRight');
         });
     }
 }
-``
+
 function handleClickNavItem() {
     const checkNavbar = document.querySelector('#check');
     checkNavbar.checked = !checkNavbar.checked;
@@ -85,3 +85,31 @@ window.addEventListener('resize', function () {
     }
 });
 
+
+var section_three = document.querySelector('#about_me');
+
+function applyAnimationsSectionThree(entries, observer_section_three) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Obtén los elementos por su ID o cualquier otro método de selección
+            const line_up_Skill = document.getElementById('line_up');
+            const line_down_Skill = document.getElementById('line_down');
+            // Agrega la clase deseada a los elementos
+            line_up_Skill.classList.add('animate__fadeInLeft');
+            line_down_Skill.classList.add('animate__fadeInRight');
+        } 
+    });
+}
+
+// Crear el observer para observar la sección three
+const observer_section_three = new IntersectionObserver(applyAnimationsSectionThree, { threshold: 0.25 });
+// Observar la sección three
+observer_section_three.observe(section_three);
+
+
+// esta funcion comprueba si un elemento esta visible en pantalla
+function isVisible(elm) {
+	var rect = elm.getBoundingClientRect();
+	var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+	return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+}
