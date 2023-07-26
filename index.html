@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Jose Hernandez</title>
+    <style>
+        /* custom style css */
+        @import url('CSS/index.css');
+        /* reset sheet   */
+        @import url('CSS/reset.css');
+    </style>
+    <!-- font-aweson -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- boostrap V 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- animate.style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- icon page -->
+    <link rel="icon" href="IMG/dev.png">
+</head>
+
+<body>
+    <Header>
+        <!-- nav bar -->
+        <nav class="nav_font">
+            <input type="checkbox" id="check" onclick="handleCheckBoxChange()">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <div class="marca">
+                <a href="#home">Jose Hernandez</a>
+            </div>
+            <ul class="nav_lista">
+                <li class="nav_item"><a onclick="handleClickNavItem()" href="#about_me">about me</a></li>
+                <li class="nav_item"><a onclick="handleClickNavItem()" href="#skills">skills</a></li>
+                <li class="nav_item"><a onclick="handleClickNavItem()" href="#project">project</a></li>
+                <li class="nav_item"><a onclick="handleClickNavItem()" href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </Header>
+    <main id="contenedor_principal">
+        <section id="home" class="container-fluid  ">
+            <div class="row vh-100 justify-content-center align-self-center text-center animate__fadeInUp">
+                <div class="container_presentacion">
+                    <p class="name">Hey, I'm Jose Hernandez</p>
+                    <p class="present">
+                        A developer who enjoys creating innovative solutions, with skills in <br>multiple programming
+                        languages
+                        and a results-oriented mindset.
+                    </p>
+                    <a id="btn_cv" href="https://github.com/joseaha/doc/blob/main/CV-JoseAlfredoHernandez%20(1).pdf"
+                        download="cv_jose_Hernandez.pdf" target="_blank
+                        ">download cv</a>
+                </div>
+            </div>
+        </section>
+        <section id="about_me" class="container-fluid ">
+            <div id="titulo_about_me" class="row justify-content-center align-self-center text-center ">
+                <hr id="line_up" style="width: 175px;" class=" border border-white border-2 opacity-50">
+                <h1 class="titulo">about me</h1>
+                <hr id="line_down" style="width: 175px;" class=" border border-white border-2 opacity-50">
+            </div>
+            <div class="row justify-content-center">
+                <div id="contenedor_foto_perfil"
+                    class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex align-self-end justify-content-end me-5 m-5">
+                    <div id="foto_perfil">
+                        <img src="IMG/foto_perfil.png" style="width: 100%; height: 100%;">
+                    </div>
+                    <div id="marco_foto"></div>
+                </div>
+                <div
+                    class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex align-self-center text-center justify-content-center">
+                    <p id="description">
+                        Hello! My name is José Alfredo Hernández Arguello, and I'm a passionate developer with
+                        strong
+                        knowledge in multiple programming languages. I received my academic training at INA (
+                        Instituto
+                        Nacional de Aprendizaje ) in Costa Rica, and I always stay updated with the latest trends in
+                        the
+                        world of development.
+                        <br>
+                        <br>
+                        I particularly enjoy creating user-friendly and visually appealing websites, mobile
+                        applications,
+                        and systems, tailoring them to meet the specific needs of each project. My main goal is to
+                        deliver
+                        high-quality solutions and exceed user expectations.
+                        <br>
+                        <br>
+                        <br>
+                        I have a strong ability to stay focused on each objective throughout the development
+                        process,
+                        and I
+                        greatly value feedback as it allows me to continuously improve. I am always eager to learn
+                        new
+                        technologies and approaches, which keeps me at the forefront of the development field.
+                        <br>
+                        <br>
+                        <br>
+                        If you need assistance with any development-related aspect, please don't hesitate to reach
+                        out
+                        to
+                        me. I'm here to provide effective solutions and create outstanding products.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="container-fluid pt-5">
+            <div id="titulo_skill" class="row justify-content-center align-self-center text-center ">
+                <hr id="line_up" style="width: 175px;" class=" border border-white border-2 opacity-50">
+                <h1 class="titulo">set skills</h1>
+                <hr id="line_down" style="width: 175px;" class=" border border-white border-2 opacity-50">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 text-center">
+                    <p id="description_skills">
+                        As a junior programmer I have developed web, desktop, and mobile applications, working
+                        on both frontend and backend. I have collaborated on software implementation in companies,
+                        gaining skills in teamwork and project management. I also have experience in database design and
+                        maintenance, ensuring data integrity and efficiency. I am passionate about continuous learning
+                        and
+                        have acquired some skills through formal education and others through self-learning, driven by
+                        my
+                        desire for continuous improvement.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="contenedor_skills col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png"
+                            alt="html-5--v1" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                HTML
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar " style="width:85%;">
+                                    <span class="progress_bar-text">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/microsoft-sql-server.png"
+                            alt="microsoft-sql-server" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                SQL Server
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:85%;">
+                                    <span class="progress_bar-text">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/react-native.png"
+                            alt="react-native" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                React native
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:65%;">
+                                    <span class="progress_bar-text">65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/nodejs.png" alt="nodejs" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                Node JS
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:70%;">
+                                    <span class="progress_bar-text">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                CSS
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:75%;">
+                                    <span class="progress_bar-text">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/mysql-logo.png"
+                            alt="mysql-logo" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                My SQL
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:72%;">
+                                    <span class="progress_bar-text">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/github--v1.png"
+                            alt="github--v1" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                GitHub
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:60%;">
+                                    <span class="progress_bar-text">60%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/typescript.png"
+                            alt="typescript" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                Type Script
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:65%;">
+                                    <span class="progress_bar-text">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png"
+                            alt="javascript--v1" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                Java Script
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:80%;">
+                                    <span class="progress_bar-text">80%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAERElEQVR4nO1ZW2xURRg+aNSERKLVndmNRqDWB2PiQwmJEhOsUbp25p+ttqckaihYgol0RQilPmiIbbkYX31pArS0b8YGo4/ElsqlNdFiyhYaEsKuGgNFFwrdarq4v/lP+0DZ7plz9py9PPRL/vRk0tn5vpn/MhfDWMYyyg/AgEsGw4LBf4LDXcnUD+FgOGCUO0zDfFAw+MoizRXea9QmAqrfNMyHjXJEHYeoYCp1P/EsIQz+ERzajXJBXRDCksGfOuLZBn9LFqkvGXF4Gqokg5/dE8+yy7W89oWiEQ9XvLtKcDUgucr4QB4XLCM4nIysjjxWSO4r6rjqEAzm3JATboQwSAuuuvcb+x/wlTkEoVlyNa0jEK3ZhX2H+/H8qV8xfjGOqTspnJ2ZxfhkwmrrO9SP0dd2OREyI4PyQ8/EZUC+Irm6YjcYBCPYtfUAJi79hk6RuJTAzuYuq69GzDUZkJtcE9+0yqyQDEYlB9sBWtZvx9joBOaL2EgM31/XostWtCKjG55QjzqfeQZx3TLveXMvJq8n0Stu/XUL29UnTtLupHMBmh/bB+2YnkujX0jPpbFN7NOK8EXAtuoWTE55n/mlVqJl/fbCCqCg8+LzOoyfHUdpE9ieBVC20YHi4mjHMWx9NYoNa5uwYa2JrTUf4bHOHtuVm/jpIu6u3WNbOzwJoNmn9GeHwW+GsLGyKecMms9uxuGB4UV9rv8+hV988KWTlOpNABUpHXknJOh/Tg0MWwWu9+BxrF/9toMM5IMAqrB2bmM38/fbW2saccuLWxe1EZb69k0AbQVygXzeKfl5yy6QBRdgt1XYuTHqUsBi4nbwRQBlhdTtVM5BGirNvAXIYqwACZiZnskpwI3/l0SA1LgQ5fyydiHJFY4Nnc85SE9XryvSUIoV6Dtkk0anklaRciqgsbIRP35jd3EF6AoZVVhHhSwUwdPfnsZMJmMVv/kNnL5fUbYSJCLXSggO2FS1GX88cWZRn/TcXfzuyPf4zvPvFVYAGR0DdSB3opigFaP0ShmKvnsO9OLNGzdz9ptOTuORz46iCtUXeDs9EsNCYfzMuK0behZQzAONKJQAsjbp/5Fyb12bfzEAAThRdod6BoOOBawzdjwkOHyuu22mK5EL5y548vlt1fbXKsSBuISrwo8YbiEqxFOSq+6l7vvvDeyO5i7rJs4prk7EsWNLp27WM5KpryM8ssbwChmS1ZLBUE4RC3/p7Hv8YB+ODY7NXy3eTuHsnVlMTCasNjqBtdbo902CqxHJ5MuG3xBMvS6Yijk9sAi3l7tcXRZBZRqFhBUfDHZIpqZcENMEqErSq01efp4vxDPiccnUYcnUv/mTB7qq7y7pA6B4UjxHweb+wQNOAofivczoAAxeElyd0wYoU7/IoNxolClWUBAKBleXIP8HxQ49xRrlDhmSKyVTny48jlyxvkNyZal5LWMZRjb+B5th1sRqH6jnAAAAAElFTkSuQmCC">
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                C#
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:85%;">
+                                    <span class="progress_bar-text">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="git" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                git
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:75%;">
+                                    <span class="progress_bar-text">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor_skill">
+                        <img width="48" height="48" src="https://img.icons8.com/color/48/python--v1.png"
+                            alt="python--v1" />
+                        <div class="contenedor_pogress">
+                            <span class="name_skill">
+                                Pythom
+                            </span>
+                            <div class="progress bg-dark">
+                                <div class="progress_bar" style="width:55%;">
+                                    <span class="progress_bar-text">55%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="project" class="pt-5">
+            <div id="titulo_project" class="">
+                <hr id="line_up" style="width: 175px;" class=" border border-white border-2 opacity-50">
+                <h1 class="titulo">projects</h1>
+                <hr id="line_down" style="width: 175px;" class=" border border-white border-2 opacity-50">
+            </div>
+            <div id="contenedor_carousel_mobile">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <img src="IMG/mobile (1).png" height="200px" class="d-block mx-auto" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/mobile (2).png" height="250px" class="d-block mx-auto " alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/mobile (3).png" height="200px" class="d-block mx-auto " alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/mobile (5).png" height="200px" class="d-block mx-auto " alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/mobile (6).png" height="200px" class="d-block mx-auto " alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="controls">
+                    <div class="up">
+                        <i class="fa fa-chevron-up"></i>
+                    </div>
+                    <div class="down">
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="left">
+                        <div>
+                            <h2>
+                                clone site web INS
+                            </h2>
+                            <p>
+                                During my academic training, I had the opportunity to develop and enhance a website for
+                                the INS (National Insurance Institute) using Bootstrap, HTML, CSS, and JavaScript. The
+                                primary objective of the project was to improve the overall user experience and
+                                introduce a dynamic dark and light theme option for the website. Although the project
+                                was solely for academic purposes, it proved to be an invaluable learning experience that
+                                significantly contributed to my practical web development skills. Through this project,
+                                I gained hands-on experience in designing responsive layouts, implementing interactive
+                                elements, and incorporating user-friendly themes, which further enriched my
+                                understanding of modern web development practices.
+                            </p>
+                            <a href="https://github.com/joseaha/ClonPaginaINS.git" <i class="fa-brands fa-github fa-2xl"
+                                style="color: #ffff; text-decoration: none; margin-top: 10px;"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <h2>
+                                Management of Budgetary Cases </h2>
+                            <p>
+                                The project was carried out in collaboration with Kelvin Garcia and developed for the
+                                accounting office "AYM Consultores". It involved the creation of a comprehensive system
+                                in C# using Entity Framework, Linq, and SQL Server, applying a layered architecture. The
+                                objective was to enable efficient tracking of administrative budgetary audits for
+                                schools, from their creation to approval and final archiving. The implemented solution
+                                optimized processes, providing greater control and efficiency in case management.
+                            </p>
+                        </div>
+                        <div>
+                            <h2>
+                                Portfolio Dev Jose Hernandez
+                            </h2>
+                            <p>
+                                Creating my first portfolio has been an exciting experience. It's a tool that showcases
+                                my work and skills, but it's also a reflection of my professional growth. I've learned
+                                to carefully select my pieces and present them in an impactful way.
+
+                                However, I don't stop there. My goal is to keep improving my portfolio continuously.
+                                I'll be incorporating new projects and acquiring relevant skills to keep it updated and
+                                relevant. I'm open to receiving constructive feedback to fine-tune its presentation and
+                                content.
+
+                                My portfolio is a work in progress, always reflecting my passion for learning and
+                                evolving in my career. With each improvement, I aim to present myself in the best
+                                possible way to future employers and clients, demonstrating my commitment to growth and
+                                continuous development.
+                            </p>
+                            <a href="https://github.com/joseaha/joseaha.github.io"<i class="fa-brands fa-github fa-2xl"
+                                style="color: #ffff; text-decoration: none; margin-top: 10px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div>
+                            <img class="img_project" src="IMG/mobile (5).png" alt="...">
+                            <img class="img_project" src="IMG/mobile (6).png" alt="...">
+                        </div>
+                        <div>
+                            <img class="img_project" src="IMG/mobile sis.png" alt="...">
+                        </div>
+                        <div>
+                            <img class="img_project" src="IMG/mobile (1).png" alt="...">
+                            <img class="img_project" src="IMG/mobile (2).png" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="p-5">
+            <div class="container ">
+                <div id="titulo_project">
+                    <hr id="line_up" style="width: 175px;" class=" border border-white border-2 opacity-50">
+                    <h1 class="titulo">contact</h1>
+                    <hr id="line_down" style="width: 175px;" class=" border border-white border-2 opacity-50">
+                </div>
+                <div class=" row text-center ">
+                    <h5>Feel free to Contact me by submitting the form below and I will get back to you as soon as
+                        possible</h5>
+                </div>
+                <div class="mt-3 footer_title">
+                    <i class="fa-regular fa-envelope fa-2xl m-3" style="color: #ffffff;"></i>
+                    <span>josedevcr@gamil.com</span>
+                </div>
+                <div class="row d-flex justify-content-center align-self-center pt-5">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <form action="https://formsubmit.co/josedevcr@gmail.com" method="POST" />
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input id="name" name="name"="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mail" class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" id="mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button id="btnForm" class="btn" type="submit">Submit</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mt-5 text-center ">
+                    <div class="footer_title">
+                        <h5>Social</h5>
+                        <hr style="width: 175px;" class="border border-white border-2 opacity-50">
+                    </div>
+                    <div class="mt-3">
+                        <a href="https://github.com/joseaha"><i class="fa-brands fa-github fa-2xl m-3"
+                                style="color: #ffff;"></i></a>
+                        <a href="https://www.linkedin.com/in/jose-alfredo-hernandez-arguello-jaha"><i
+                                class="fa-brands fa-linkedin fa-2xl m-3" style="color: #ffff;"></i></a>
+                        <a href="https://www.facebook.com/jose.jh.jaha">
+                            <i class="fa-brands fa-square-facebook fa-2xl m-3" style="color:#fff;"></i></a>
+                        <a href="https://www.instagram.com/jose_hernandezupa/"><i
+                                class="fa-brands fa-instagram fa-2xl m-3" style="color: #ffff;"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mt-5 text-center">
+                    <div class="footer_title">
+                        <h5>Jose Hernandez</h5>
+                        <hr style="width: 175px;" class="border border-white border-2 opacity-50">
+                    </div>
+                    <div class="mt-3 text-center">
+                        <p>As a programmer, my focus is on building successful and user-friendly software through
+                            innovative and efficient solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer_title mt-5 text-center ">
+                <hr style="width: 97%;" class="border border-white border-1 opacity-50">
+                <p>© Copyright 2023. Made by Jose Hernandez Arguello</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- java script index.js -->
+<script src="JS/index.js"></script>
+<!-- boostrap js V 5.3 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</html>
