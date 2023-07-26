@@ -97,7 +97,7 @@ function applyAnimationsSectionThree(entries, observer_section_three) {
             // Agrega la clase deseada a los elementos
             line_up_Skill.classList.add('animate__fadeInLeft');
             line_down_Skill.classList.add('animate__fadeInRight');
-        } 
+        }
     });
 }
 
@@ -106,10 +106,17 @@ const observer_section_three = new IntersectionObserver(applyAnimationsSectionTh
 // Observar la sección three
 observer_section_three.observe(section_three);
 
+let toTop = document.querySelector(".to-top");
 
-// esta funcion comprueba si un elemento esta visible en pantalla
-function isVisible(elm) {
-	var rect = elm.getBoundingClientRect();
-	var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-	return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-}
+window.addEventListener('beforeunload', function (event) {
+    window.location.reload(false); 
+    toTop.classList.add("active");
+
+});
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+    } else {
+        toTop.classList.remove("active");
+    }
+});
