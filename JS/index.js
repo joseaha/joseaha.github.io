@@ -108,15 +108,19 @@ observer_section_three.observe(section_three);
 
 let toTop = document.querySelector(".to-top");
 
-window.addEventListener('beforeunload', function (event) {
-    window.location.reload(false); 
-    toTop.classList.add("active");
-
-});
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) {
         toTop.classList.add("active");
     } else {
         toTop.classList.remove("active");
     }
+});
+
+window.addEventListener('load', function () {
+    console.log('La página ha terminado de cargarse!!');
+
+    // Obtener la referencia a la sección "home" mediante su id.
+    var homeSection = document.querySelector('header');
+
+        homeSection.scrollIntoView();
 });
