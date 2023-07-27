@@ -115,12 +115,3 @@ window.addEventListener("scroll", () => {
         toTop.classList.remove("active");
     }
 });
-
-window.addEventListener('load', function () {
-    console.log('La página ha terminado de cargarse!!');
-
-    // Obtener la referencia a la sección "home" mediante su id.
-    var homeSection = document.querySelector('header');
-
-        homeSection.scrollIntoView();
-});
