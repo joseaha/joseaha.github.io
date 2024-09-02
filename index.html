@@ -496,7 +496,12 @@ initwebchat({
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-                }
+                },
+                {
+						"key": "Authorization",
+						"value": "Basic dUNBcmd1ZWxsby10ZXN0V0VCQ2FsbDphZGM5MTM2Ny05OWVlLTQyN2YtYmJkNC00ZmU5YzRmNmU2ZjU=",
+						"type": "text"
+				}
             })
             .then(response => response.text())
             .then(data => {
