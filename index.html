@@ -480,38 +480,34 @@ initwebchat({
 </script > 
 
   <script>
-        function makeRequest() {
-            // Obtiene los valores de los campos de entrada
-            const phone = document.getElementById('phone').value;
-            const tecnology = document.getElementById('tecnology').value;
-            const context = document.getElementById('context').value;
-            const destination = document.getElementById('destination').value;
-            const priority = document.getElementById('priority').value;
+   function makeRequest() {
+    // Obtiene los valores de los campos de entrada
+    const phone = document.getElementById('phone').value;
+    const tecnology = document.getElementById('tecnology').value;
+    const context = document.getElementById('context').value;
+    const destination = document.getElementById('destination').value;
+    const priority = document.getElementById('priority').value;
 
-            // Crea la URL con los parámetros
-            const url = `https://desarrollocr.ucontactcloud.com/Integra/resources/Utils/CallBack/phone=${phone}&tecnology=${tecnology}&context=${context}&destination=${destination}&priority=${priority}`;
+    // Crea la URL con los parámetros
+    const url = `https://desarrollocr.ucontactcloud.com/Integra/resources/Utils/CallBack/phone=${phone}&tecnology=${tecnology}&context=${context}&destination=${destination}&priority=${priority}`;
 
-            // Realiza la solicitud GET
-            fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-                },
-                {
-						"key": "Authorization",
-						"value": "Basic dUNBcmd1ZWxsby10ZXN0V0VCQ2FsbDphZGM5MTM2Ny05OWVlLTQyN2YtYmJkNC00ZmU5YzRmNmU2ZjU=",
-						"type": "text"
-				}
-            })
-            .then(response => response.text())
-            .then(data => {
-                console.log(data);
-                alert("Solicitud realizada con éxito: " + data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert("Hubo un error al realizar la solicitud");
-            });
+    // Realiza la solicitud GET
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'Authorization': 'Basic dUNBcmd1ZWxsby10ZXN0V0VCQ2FsbDphZGM5MTM2Ny05OWVlLTQyN2YtYmJkNC00ZmU5YzRmNmU2ZjU='
         }
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        alert("Solicitud realizada con éxito: " + data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("Hubo un error al realizar la solicitud");
+    });
+}
     </script>
 </html>
