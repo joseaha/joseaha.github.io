@@ -440,6 +440,27 @@
                 <hr style="width: 97%;" class="border border-white border-1 opacity-50">
                 <p>© Copyright 2023. Made by Jose Hernandez Arguello</p>
             </div>
+            <div class="row footer_title mt-5 text-center ">
+               <h2>Realizar Solicitud de Callback</h2>
+
+    <label for="phone">Teléfono:</label>
+    <input type="text" id="phone" placeholder="Ingrese el número de teléfono" required><br><br>
+
+    <label for="tecnology">Tecnología:</label>
+    <input type="text" id="tecnology" placeholder="Ingrese la tecnología" value="SIP/CARRIER/" required><br><br>
+
+    <label for="context">Contexto:</label>
+    <input type="text" id="context" placeholder="Ingrese el contexto" value="agents" required><br><br>
+
+    <label for="destination">Destino:</label>
+    <input type="text" id="destination" placeholder="Ingrese el destino"><br><br>
+
+    <label for="priority">Prioridad:</label>
+    <input type="text" id="priority" placeholder="Ingrese la prioridad"><br><br>
+
+    <button onclick="makeRequest()">Realizar Solicitud</button>
+            </div>
+
         </div>
     </footer>
 </body>
@@ -457,4 +478,35 @@ initwebchat({
     campaign: "bot_pruebavideollamadas"
 });
 </script > 
+
+  <script>
+        function makeRequest() {
+            // Obtiene los valores de los campos de entrada
+            const phone = document.getElementById('phone').value;
+            const tecnology = document.getElementById('tecnology').value;
+            const context = document.getElementById('context').value;
+            const destination = document.getElementById('destination').value;
+            const priority = document.getElementById('priority').value;
+
+            // Crea la URL con los parámetros
+            const url = `https://desarrollocr.ucontactcloud.com/Integra/resources/Utils/CallBack/phone=${phone}&tecnology=${tecnology}&context=${context}&destination=${destination}&priority=${priority}`;
+
+            // Realiza la solicitud GET
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                alert("Solicitud realizada con éxito: " + data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Hubo un error al realizar la solicitud");
+            });
+        }
+    </script>
 </html>
