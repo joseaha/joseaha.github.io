@@ -1,414 +1,423 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de José Alfredo Hernández Arguello, desarrollador junior de Costa Rica especializado en desarrollo web y aplicaciones.">
     <title>Dev Jose Hernandez</title>
     <meta name="facebook-domain-verification" content="4epdpc0fccqcwlxppf7vlva2r5kch0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
-        /* custom style css */
         @import url('CSS/index.css');
-        /* reset sheet   */
         @import url('CSS/reset.css');
     </style>
-    <!-- font-aweson -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- boostrap V 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- animate.style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- icon page -->
     <link rel="icon" href="IMG/dev.png">
 </head>
 
 <body>
     <Header>
-        <!-- nav bar -->
         <nav class="nav_font">
             <input type="checkbox" id="check" onclick="handleCheckBoxChange()">
             <label for="check" class="checkbtn">
                 <i class="fa-solid fa-bars"></i>
             </label>
             <div class="marca">
-                <a href="#home" class="">Jose Hernandez</a>
+                <a href="#home">Jose Hernandez</a>
             </div>
             <ul class="nav_lista animate__fadeInLeft">
                 <li class="nav_item"><a class="hvr-overline-from-center" onclick="handleClickNavItem()"
-                        href="#about_me">about me</a></li>
+                        href="#about_me">Sobre Mí</a></li>
                 <li class="nav_item"><a class="hvr-overline-from-center" onclick="handleClickNavItem()"
-                        href="#skills">skills</a></li>
+                        href="#skills">Habilidades</a></li>
                 <li class="nav_item"><a class="hvr-overline-from-center" onclick="handleClickNavItem()"
-                        href="#project">project</a></li>
+                        href="#project">Proyectos</a></li>
                 <li class="nav_item"><a class="hvr-overline-from-center" onclick="handleClickNavItem()"
-                        href="#contact">contact</a></li>
+                        href="#contact">Contactos</a></li>
             </ul>
         </nav>
     </Header>
     <main id="contenedor_principal">
         <a href="#" class="to-top">
-            <i class="fa-solid fa-arrow-up fa-2xl" style="color: #ffffff;"></i>        </a>
-        <section id="home" class="container-fluid  ">
+            <i class="fa-solid fa-arrow-up fa-2xl" style="color: #ffffff;"></i>
+        </a>
+        <section id="home" class="container-fluid">
             <div class="row vh-100 justify-content-center align-self-center text-center animate__fadeInUp">
                 <div class="container_presentacion">
-                    <p class="name tracking-in-contract-bck">Hey, I'm Jose Hernandez</p>
+                    <p class="name tracking-in-contract-bck">Hola, soy Jose Hernandez</p>
                     <p class="present">
-                        A developer who enjoys creating innovative solutions, with skills in <br>multiple programming
-                        languages
-                        and a results-oriented mindset.
+                        Desarrollador Full Stack apasionado por construir soluciones digitales eficientes,<br>
+                        con experiencia en frontend, backend, bases de datos e inteligencia artificial.
                     </p>
                     <a class="hvr-sweep-to-top" id="btn_cv"
                         href="https://drive.google.com/file/d/1zOFiI6scH-VWHzkvXR-R9mXrCzrMHuZt/view?usp=sharing"
-                        download="cv_jose_Hernandez.pdf" target="_blank
-                        ">download cv</a>
+                        target="_blank">descargar cv</a>
                 </div>
             </div>
         </section>
-        <section id="about_me" class="container-fluid ">
-            <div id="titulo_about_me" class="row justify-content-center align-self-center text-center ">
-                <hr id="line_up" style="width: 175px;" class=" border border-white border-2 opacity-50">
-                <h1 class="titulo">about me</h1>
-                <hr id="line_down" style="width: 175px;" class=" border border-white border-2 opacity-50">
+        <section id="about_me" class="container-fluid">
+            <div id="titulo_about_me" class="row justify-content-center align-self-center text-center">
+                <hr id="line_up" style="width: 175px;" class="border border-white border-2 opacity-50">
+                <h1 class="titulo">Sobre Mí</h1>
+                <hr id="line_down" style="width: 175px;" class="border border-white border-2 opacity-50">
             </div>
             <div class="row justify-content-center pt-3">
-                <div id="contenedor_foto_perfil"
-                    class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex align-self-end justify-content-end me-5 m-5">
-                    <div id="foto_perfil">
-                        <img src="IMG/foto_perfil-transformed.png">
-                    </div>
-                    <div id="marco_foto"></div>
-                </div>
-                <div
-                    class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex align-self-center text-center justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 d-flex align-self-center text-center justify-content-center">
                     <p id="description">
-                        Hello! My name is José Alfredo Hernández Arguello, and I'm a passionate developer with
-                        strong
-                        knowledge in multiple programming languages. I received my academic training at INA (
-                        Instituto
-                        Nacional de Aprendizaje ) in Costa Rica, and I always stay updated with the latest trends in
-                        the
-                        world of development.
-                        <br>
-                        <br>
-                        I particularly enjoy creating user-friendly and visually appealing websites, mobile
-                        applications,
-                        and systems, tailoring them to meet the specific needs of each project. My main goal is to
-                        deliver
-                        high-quality solutions and exceed user expectations.
-                        <br>
-                        <br>
-                        <br>
-                        I have a strong ability to stay focused on each objective throughout the development
-                        process,
-                        and I
-                        greatly value feedback as it allows me to continuously improve. I am always eager to learn
-                        new
-                        technologies and approaches, which keeps me at the forefront of the development field.
-                        <br>
-                        <br>
-                        <br>
-                        If you need assistance with any development-related aspect, please don't hesitate to reach
-                        out
-                        to
-                        me. I'm here to provide effective solutions and create outstanding products.
+                        ¡Hola! Soy José Alfredo Hernández Arguello, desarrollador Full Stack con experiencia en
+                        tecnologías de frontend, backend, bases de datos e inteligencia artificial. Me formé en el INA
+                        (Instituto Nacional de Aprendizaje) de Costa Rica, y me mantengo constantemente actualizado
+                        explorando nuevas herramientas y tendencias del desarrollo de software.
+                        <br><br>
+                        Me apasiona construir sitios web, aplicaciones móviles y sistemas robustos que sean tanto
+                        funcionales como visualmente atractivos, siempre alineados con las necesidades reales de cada
+                        proyecto. Mi compromiso es entregar soluciones de calidad que generen valor y superen las
+                        expectativas.
+                        <br><br>
+                        Si tenés un proyecto en mente o necesitás apoyo en algún aspecto del desarrollo, no dudes en
+                        escribirme. Estoy disponible para colaborar y construir algo que marque la diferencia.
                     </p>
                 </div>
             </div>
         </section>
         <section id="skills" class="container-fluid pt-5">
-            <div id="titulo_skill" class="row justify-content-center align-self-center text-center ">
-                <hr id="line_up" style="width: 175px;" class=" border border-white border-2 opacity-50">
-                <h1 class="titulo">set skills</h1>
-                <hr id="line_down" style="width: 175px;" class=" border border-white border-2 opacity-50">
+            <div id="titulo_skill" class="row justify-content-center align-self-center text-center">
+                <hr id="line_up" style="width: 175px;" class="border border-white border-2 opacity-50">
+                <h1 class="titulo">Habilidades</h1>
+                <hr id="line_down" style="width: 175px;" class="border border-white border-2 opacity-50">
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 text-center">
                     <p id="description_skills">
-                        As a junior programmer I have developed web, desktop, and mobile applications, working
-                        on both frontend and backend. I have collaborated on software implementation in companies,
-                        gaining skills in teamwork and project management. I also have experience in database design and
-                        maintenance, ensuring data integrity and efficiency. I am passionate about continuous learning
-                        and
-                        have acquired some skills through formal education and others through self-learning, driven by
-                        my
-                        desire for continuous improvement.
+                        Como programador junior he desarrollado aplicaciones web, de escritorio y móviles, trabajando
+                        tanto en frontend como en backend. He colaborado en la implementación de software en empresas,
+                        adquiriendo habilidades en trabajo en equipo y gestión de proyectos. También tengo experiencia
+                        en diseño y mantenimiento de bases de datos, garantizando la integridad y eficiencia de los
+                        datos.
                     </p>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="contenedor_skills col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 ">
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png"
-                            alt="html-5--v1" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill ">
-                                HTML
-                            </span>
-                           
+                <div class="skills_wrapper col-12 col-md-10 col-lg-8">
+
+                    <div class="skills_group">
+                        <span class="skills_category">Frontend</span>
+                        <div class="skills_fila">
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png"
+                                    alt="HTML5" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">HTML</span>
+                                </div>
+                            </div>
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="CSS3" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">CSS</span>
+                                </div>
+                            </div>
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png"
+                                    alt="JavaScript" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">JavaScript</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/microsoft-sql-server.png"
-                            alt="microsoft-sql-server" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                SQL Server
-                            </span>
-                           
+
+
+                    <div class="skills_group">
+                        <span class="skills_category">IA</span>
+                        <div class="skills_fila">
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://cdn.simpleicons.org/langchain/ffffff" alt="LangChain" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">LangChain</span>
+                                </div>
+                            </div>
+                            <div class="contenedor_skill">
+                                <img width="48" height="48"
+                                    src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="LangGraph" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">LangGraph</span>
+                                </div>
+                            </div>
+                            <div class="contenedor_skill">
+                                <img width="48" height="48"
+                                    src="https://img.icons8.com/color/48/amazon-web-services.png" alt="AWS Bedrock" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">AWS Bedrock</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="IMG/java.png" alt="Java" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                JAVA
-                            </span>
+
+                    <div class="skills_group">
+                        <span class="skills_category">Backend</span>
+                        <div class="skills_fila">
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/c-sharp-logo.png" alt="C#" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">C#</span>
+                                </div>
+                            </div>
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/python--v1.png"
+                                    alt="Python" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">Python</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/nodejs.png" alt="nodejs" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                Node JS
-                            </span>
+
+                    <div class="skills_group">
+                        <span class="skills_category">Base de Datos</span>
+                        <div class="skills_fila">
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/mysql-logo.png"
+                                    alt="MySQL" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">MySQL</span>
+                                </div>
+                            </div>
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/postgreesql.png"
+                                    alt="PostgreSQL" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">PostgreSQL</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                CSS
-                            </span>
-                            
+
+                    <div class="skills_group">
+                        <span class="skills_category">DevOps</span>
+                        <div class="skills_fila">
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/docker.png"
+                                    alt="Docker" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">Docker</span>
+                                </div>
+                            </div>
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/nginx.png"
+                                    alt="Nginx" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">Nginx</span>
+                                </div>
+                            </div>
+                            <div class="contenedor_skill">
+                                <img width="48" height="48"
+                                    src="https://img.icons8.com/color/48/amazon-web-services.png" alt="AWS" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">AWS</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/mysql-logo.png"
-                            alt="mysql-logo" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                My SQL
-                            </span>
-                           
+
+                    <div class="skills_group">
+                        <span class="skills_category">Versionado</span>
+                        <div class="skills_fila">
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="Git" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">Git</span>
+                                </div>
+                            </div>
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/github--v1.png"
+                                    alt="GitHub" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">GitHub</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/github--v1.png"
-                            alt="github--v1" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                GitHub
-                            </span>
-                           
+
+
+
+                    <div class="skills_group">
+                        <span class="skills_category">SO</span>
+                        <div class="skills_fila">
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/linux.png"
+                                    alt="Linux" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">Linux</span>
+                                </div>
+                            </div>
+                            <div class="contenedor_skill">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/windows-11.png"
+                                    alt="Windows" />
+                                <div class="contenedor_pogress">
+                                    <span class="name_skill">Windows</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/typescript.png"
-                            alt="typescript" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                Type Script
-                            </span>
-                          
-                        </div>
-                    </div>
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png"
-                            alt="javascript--v1" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                Java Script
-                            </span>
-                           
-                        </div>
-                    </div>
-                    <div class="contenedor_skill">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAERElEQVR4nO1ZW2xURRg+aNSERKLVndmNRqDWB2PiQwmJEhOsUbp25p+ttqckaihYgol0RQilPmiIbbkYX31pArS0b8YGo4/ElsqlNdFiyhYaEsKuGgNFFwrdarq4v/lP+0DZ7plz9py9PPRL/vRk0tn5vpn/MhfDWMYyyg/AgEsGw4LBf4LDXcnUD+FgOGCUO0zDfFAw+MoizRXea9QmAqrfNMyHjXJEHYeoYCp1P/EsIQz+ERzajXJBXRDCksGfOuLZBn9LFqkvGXF4Gqokg5/dE8+yy7W89oWiEQ9XvLtKcDUgucr4QB4XLCM4nIysjjxWSO4r6rjqEAzm3JATboQwSAuuuvcb+x/wlTkEoVlyNa0jEK3ZhX2H+/H8qV8xfjGOqTspnJ2ZxfhkwmrrO9SP0dd2OREyI4PyQ8/EZUC+Irm6YjcYBCPYtfUAJi79hk6RuJTAzuYuq69GzDUZkJtcE9+0yqyQDEYlB9sBWtZvx9joBOaL2EgM31/XostWtCKjG55QjzqfeQZx3TLveXMvJq8n0Stu/XUL29UnTtLupHMBmh/bB+2YnkujX0jPpbFN7NOK8EXAtuoWTE55n/mlVqJl/fbCCqCg8+LzOoyfHUdpE9ieBVC20YHi4mjHMWx9NYoNa5uwYa2JrTUf4bHOHtuVm/jpIu6u3WNbOzwJoNmn9GeHwW+GsLGyKecMms9uxuGB4UV9rv8+hV988KWTlOpNABUpHXknJOh/Tg0MWwWu9+BxrF/9toMM5IMAqrB2bmM38/fbW2saccuLWxe1EZb69k0AbQVygXzeKfl5yy6QBRdgt1XYuTHqUsBi4nbwRQBlhdTtVM5BGirNvAXIYqwACZiZnskpwI3/l0SA1LgQ5fyydiHJFY4Nnc85SE9XryvSUIoV6Dtkk0anklaRciqgsbIRP35jd3EF6AoZVVhHhSwUwdPfnsZMJmMVv/kNnL5fUbYSJCLXSggO2FS1GX88cWZRn/TcXfzuyPf4zvPvFVYAGR0DdSB3opigFaP0ShmKvnsO9OLNGzdz9ptOTuORz46iCtUXeDs9EsNCYfzMuK0behZQzAONKJQAsjbp/5Fyb12bfzEAAThRdod6BoOOBawzdjwkOHyuu22mK5EL5y548vlt1fbXKsSBuISrwo8YbiEqxFOSq+6l7vvvDeyO5i7rJs4prk7EsWNLp27WM5KpryM8ssbwChmS1ZLBUE4RC3/p7Hv8YB+ODY7NXy3eTuHsnVlMTCasNjqBtdbo902CqxHJ5MuG3xBMvS6Yijk9sAi3l7tcXRZBZRqFhBUfDHZIpqZcENMEqErSq01efp4vxDPiccnUYcnUv/mTB7qq7y7pA6B4UjxHweb+wQNOAofivczoAAxeElyd0wYoU7/IoNxolClWUBAKBleXIP8HxQ49xRrlDhmSKyVTny48jlyxvkNyZal5LWMZRjb+B5th1sRqH6jnAAAAAElFTkSuQmCC">
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                C#
-                            </span>
-                           
-                        </div>
-                    </div>
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="git" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                git
-                            </span>
-                          
-                        </div>
-                    </div>
-                    <div class="contenedor_skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/python--v1.png"
-                            alt="python--v1" />
-                        <div class="contenedor_pogress">
-                            <span class="name_skill">
-                                Python
-                            </span>
-                           
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
         <section id="project" class="pt-5">
             <div id="titulo_project" class="">
-                <hr id="line_up" style="width: 175px;" class=" border border-white border-2 opacity-50">
-                <h1 class="titulo">projects</h1>
-                <hr id="line_down" style="width: 175px;" class=" border border-white border-2 opacity-50">
+                <hr id="line_up" style="width: 175px;" class="border border-white border-2 opacity-50">
+                <h1 class="titulo">Proyectos</h1>
+                <hr id="line_down" style="width: 175px;" class="border border-white border-2 opacity-50">
             </div>
             <div id="contenedor_carousel_mobile">
                 <div id="carouselExample" class="carousel slide">
                     <div class="carousel-inner">
-                        <div class="carousel-item active ">
-                            <img src="IMG/mobile (1).png" height="200px" class="d-block mx-auto" alt="...">
+                        <div class="carousel-item active">
+                            <img src="IMG/mobile (1).png" height="200px" class="d-block mx-auto" alt="Proyecto 1">
                         </div>
                         <div class="carousel-item">
-                            <img src="IMG/mobile (2).png" height="250px" class="d-block mx-auto " alt="...">
+                            <img src="IMG/mobile (2).png" height="250px" class="d-block mx-auto" alt="Proyecto 2">
                         </div>
                         <div class="carousel-item">
-                            <img src="IMG/mobile (3).png" height="200px" class="d-block mx-auto " alt="...">
+                            <img src="IMG/mobile (3).png" height="200px" class="d-block mx-auto" alt="Proyecto 3">
                         </div>
                         <div class="carousel-item">
-                            <img src="IMG/mobile (5).png" height="200px" class="d-block mx-auto " alt="...">
+                            <img src="IMG/mobile (5).png" height="200px" class="d-block mx-auto" alt="Proyecto 4">
                         </div>
                         <div class="carousel-item">
-                            <img src="IMG/mobile (6).png" height="200px" class="d-block mx-auto " alt="...">
+                            <img src="IMG/mobile (6).png" height="200px" class="d-block mx-auto" alt="Proyecto 5">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                        <span class="visually-hidden">Anterior</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                        <span class="visually-hidden">Siguiente</span>
                     </button>
                 </div>
             </div>
             <div class="slider">
                 <div class="controls">
-                    <div class="up">
+                    <div class="up" aria-label="Proyecto anterior">
                         <i class="fa fa-chevron-up"></i>
                     </div>
-                    <div class="down">
+                    <div class="down" aria-label="Proyecto siguiente">
                         <i class="fa fa-chevron-down"></i>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="left">
                         <div>
-                            <h2>
-                                clone site web INS
-                            </h2>
+                            <h2>Clon sitio web INS</h2>
                             <p>
-                                During my academic training, I had the opportunity to develop and enhance a website for
-                                the INS (National Insurance Institute) using Bootstrap, HTML, CSS, and JavaScript. The
-                                primary objective of the project was to improve the overall user experience and
-                                introduce a dynamic dark and light theme option for the website. Although the project
-                                was solely for academic purposes, it proved to be an invaluable learning experience that
-                                significantly contributed to my practical web development skills. Through this project,
-                                I gained hands-on experience in designing responsive layouts, implementing interactive
-                                elements, and incorporating user-friendly themes, which further enriched my
-                                understanding of modern web development practices.
+                                Durante mi formación académica, tuve la oportunidad de desarrollar y mejorar un sitio
+                                web
+                                para el INS (Instituto Nacional de Seguros) utilizando Bootstrap, HTML, CSS y
+                                JavaScript.
+                                El objetivo principal fue mejorar la experiencia del usuario e introducir un modo
+                                dinámico
+                                de tema oscuro y claro. Aunque fue un proyecto académico, representó una experiencia de
+                                aprendizaje invaluable que enriqueció mis habilidades prácticas de desarrollo web.
                             </p>
-                            <a href="https://github.com/joseaha/ClonPaginaINS.git" <i class="fa-brands fa-github fa-2xl"
-                                style="color: #ffff; text-decoration: none; margin-top: 10px;"></i>
+                            <a href="https://github.com/joseaha/ClonPaginaINS.git" target="_blank"
+                                aria-label="Ver proyecto en GitHub">
+                                <i class="fa-brands fa-github fa-2xl"
+                                    style="color: #ffff; text-decoration: none; margin-top: 10px;"></i>
                             </a>
                         </div>
                         <div>
-                            <h2>
-                                Management of Budgetary Cases </h2>
+                            <h2>Gestión de Casos Presupuestarios</h2>
                             <p>
-                                The project was carried out in collaboration with Kelvin Garcia and developed for the
-                                accounting office "AYM Consultores". It involved the creation of a comprehensive system
-                                in C# using Entity Framework, Linq, and SQL Server, applying a layered architecture. The
-                                objective was to enable efficient tracking of administrative budgetary audits for
-                                schools, from their creation to approval and final archiving. The implemented solution
-                                optimized processes, providing greater control and efficiency in case management.
+                                Proyecto realizado en colaboración con Kelvin Garcia para la oficina contable "AYM
+                                Consultores".
+                                Consistió en la creación de un sistema integral en C# con Entity Framework, Linq y SQL
+                                Server,
+                                aplicando arquitectura por capas. El objetivo fue permitir el seguimiento eficiente de
+                                auditorías
+                                presupuestarias administrativas de escuelas, desde su creación hasta aprobación y
+                                archivo final.
                             </p>
                         </div>
                         <div>
-                            <h2>
-                                Portfolio Dev Jose Hernandez
-                            </h2>
+                            <h2>Portfolio Dev Jose Hernandez</h2>
                             <p>
-                                Creating my first portfolio has been an exciting experience. It's a tool that showcases
-                                my work and skills, but it's also a reflection of my professional growth. I've learned
-                                to carefully select my pieces and present them in an impactful way.
-
-                                However, I don't stop there. My goal is to keep improving my portfolio continuously.
-                                I'll be incorporating new projects and acquiring relevant skills to keep it updated and
-                                relevant. I'm open to receiving constructive feedback to fine-tune its presentation and
-                                content.
-
-                                My portfolio is a work in progress, always reflecting my passion for learning and
-                                evolving in my career. With each improvement, I aim to present myself in the best
-                                possible way to future employers and clients, demonstrating my commitment to growth and
-                                continuous development.
+                                Crear mi primer portfolio fue una experiencia emocionante. Es una herramienta que
+                                muestra
+                                mi trabajo y habilidades, pero también refleja mi crecimiento profesional. Aprendí a
+                                seleccionar mis proyectos cuidadosamente y presentarlos de forma impactante. Mi objetivo
+                                es seguir mejorándolo continuamente, incorporando nuevos proyectos y habilidades
+                                relevantes.
                             </p>
-                            <a href="https://github.com/joseaha/joseaha.github.io" <i class="fa-brands fa-github fa-2xl"
-                                style="color: #ffff; text-decoration: none; margin-top: 10px;"></i>
+                            <a href="https://github.com/joseaha/joseaha.github.io" target="_blank"
+                                aria-label="Ver portfolio en GitHub">
+                                <i class="fa-brands fa-github fa-2xl"
+                                    style="color: #ffff; text-decoration: none; margin-top: 10px;"></i>
                             </a>
                         </div>
                     </div>
                     <div class="right">
                         <div>
-                            <img class="img_project" src="IMG/mobile (5).png" alt="...">
-                            <img class="img_project" src="IMG/mobile (6).png" alt="...">
+                            <img class="img_project" src="IMG/mobile (5).png" alt="Captura proyecto INS 1">
+                            <img class="img_project" src="IMG/mobile (6).png" alt="Captura proyecto INS 2">
                         </div>
                         <div>
-                            <img class="img_project" src="IMG/mobile sis.png" alt="...">
+                            <img class="img_project" src="IMG/mobile sis.png" alt="Captura sistema presupuestario">
                         </div>
                         <div>
-                            <img class="img_project" src="IMG/mobile (1).png" alt="...">
-                            <img class="img_project" src="IMG/mobile (2).png" alt="...">
+                            <img class="img_project" src="IMG/mobile (1).png" alt="Captura portfolio 1">
+                            <img class="img_project" src="IMG/mobile (2).png" alt="Captura portfolio 2">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="contact" class="p-5">
-            <div class="container ">
+            <div class="container">
                 <div id="titulo_project">
-                    <hr id="line_up" style="width: 175px;" class=" border border-white border-2 opacity-50">
-                    <h1 class="titulo">contact</h1>
-                    <hr id="line_down" style="width: 175px;" class=" border border-white border-2 opacity-50">
+                    <hr id="line_up" style="width: 175px;" class="border border-white border-2 opacity-50">
+                    <h1 class="titulo">Contacto</h1>
+                    <hr id="line_down" style="width: 175px;" class="border border-white border-2 opacity-50">
                 </div>
-                <div class=" row text-center ">
-                    <h5>Feel free to Contact me by submitting the form below and I will get back to you as soon as
-                        possible</h5>
+                <div class="row text-center">
+                    <h5>Sentite libre de contactarme mediante el formulario y te responderé a la brevedad posible</h5>
                 </div>
                 <div class="mt-3 footer_title">
                     <i class="fa-regular fa-envelope fa-2xl m-3" style="color: #ffffff;"></i>
-                    <span>josedevcr@gamil.com</span>
+                    <span>josedevcr@gmail.com</span>
                 </div>
                 <div class="row d-flex justify-content-center align-self-center pt-5">
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                        <form action="https://formsubmit.co/josedevcr@gmail.com" method="POST" />
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input id="name" name="name"="text" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label for="mail" class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" id="mail">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-                        </div>
-                        <div class="d-grid gap-2 col-6 mx-auto">
-                            <button id="btnForm" class="btn" type="submit">Submit</button>
-                        </div>
+                        <form action="https://formsubmit.co/josedevcr@gmail.com" method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input id="name" name="name" type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mail" class="form-label">Correo electrónico</label>
+                                <input type="email" name="email" class="form-control" id="mail">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                            </div>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button id="btnForm" class="btn" type="submit">Enviar</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -417,44 +426,37 @@
     </main>
     <footer>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mt-5 text-center ">
-                    <div class="footer_title">
-                        <h5>Social</h5>
-                        <hr style="width: 175px;" class="border border-white border-2 opacity-50">
-                    </div>
-                    <div class="mt-3">
-                        <a href="https://github.com/joseaha"><i class="fa-brands fa-github fa-2xl m-3"
-                                style="color: #ffff;"></i></a>
-                        <a href="https://www.linkedin.com/in/jose-alfredo-hernandez-arguello-jaha"><i
-                                class="fa-brands fa-linkedin fa-2xl m-3" style="color: #ffff;"></i></a>
-                        <a href="https://www.facebook.com/jose.jh.jaha">
-                            <i class="fa-brands fa-square-facebook fa-2xl m-3" style="color:#fff;"></i></a>
-                        <a href="https://www.instagram.com/jose_hernandezupa/"><i
-                                class="fa-brands fa-instagram fa-2xl m-3" style="color: #ffff;"></i></a>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mt-5 text-center">
-                    <div class="footer_title">
-                        <h5>Jose Hernandez</h5>
-                        <hr style="width: 175px;" class="border border-white border-2 opacity-50">
-                    </div>
-                    <div class="mt-3 text-center">
-                        <p>As a programmer, my focus is on building successful and user-friendly software through
-                            innovative and efficient solutions.</p>
+            <div class="row justify-content-center py-5">
+                <div class="col-12 text-center">
+                    <p class="footer_name mb-1">Jose Hernandez</p>
+                    <p class="footer_tagline mb-4">Full Stack Developer · Costa Rica</p>
+                    <div class="footer_socials">
+                        <a href="https://github.com/joseaha" aria-label="GitHub" class="footer_social_link">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jose-alfredo-hernandez-arguello-jaha" aria-label="LinkedIn"
+                            class="footer_social_link">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/jose.jh.jaha" aria-label="Facebook"
+                            class="footer_social_link">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jose_hernandezupa/" aria-label="Instagram"
+                            class="footer_social_link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="row footer_title mt-5 text-center ">
-                <hr style="width: 97%;" class="border border-white border-1 opacity-50">
-                <p>© Copyright 2023. Made by Jose Hernandez Arguello</p>
+            <div class="row footer_title text-center pb-3">
+                <hr style="width: 97%;" class="border border-white border-1 opacity-25">
+                <p class="footer_copy">© Copyright 2026. Hecho por Jose Hernandez Arguello</p>
             </div>
         </div>
     </footer>
 </body>
-<!-- java script index.js -->
 <script src="JS/index.js"></script>
-<!-- boostrap js V 5.3 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>

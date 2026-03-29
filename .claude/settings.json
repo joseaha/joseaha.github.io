@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find . -maxdepth 2 -type f \\\\\\(-name *.json -o -name *.yaml -o -name *.yml -o -name *.md -o -name .gitignore -o -name package.json \\\\\\))"
+    ]
+  }
+}
