@@ -5,460 +5,372 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Portfolio de José Alfredo Hernández Arguello, desarrollador junior de Costa Rica especializado en desarrollo web y aplicaciones.">
-    <title>Dev Jose Hernandez</title>
+        content="Portfolio de José Alfredo Hernández Argüello, desarrollador Full Stack de Costa Rica con más de 3 años de experiencia en backend, agentes de IA (LangChain, FastAPI) y cloud.">
+    <title>Jose Hernandez · Full Stack &amp; AI Agent Developer</title>
     <meta name="facebook-domain-verification" content="4epdpc0fccqcwlxppf7vlva2r5kch0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
         rel="stylesheet">
-    <style>
-        @import url('CSS/index.css');
-        @import url('CSS/reset.css');
-    </style>
+    <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- CSS propio al final para que gane sobre Bootstrap -->
+    <link rel="stylesheet" href="CSS/index.css">
     <link rel="icon" href="IMG/dev.png">
 </head>
 
 <body>
-    <Header>
-        <nav class="nav_font">
-            <input type="checkbox" id="check" onclick="handleCheckBoxChange()">
-            <label for="check" class="checkbtn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
+    <header>
+        <nav class="nav_font" aria-label="Navegación principal">
             <div class="marca">
                 <a href="#home">Jose Hernandez</a>
             </div>
-            <ul class="nav_lista animate__fadeInLeft">
-                <li class="nav_item"><a class="hvr-overline-from-center" onclick="handleClickNavItem()"
-                        href="#about_me">Sobre Mí</a></li>
-                <li class="nav_item"><a class="hvr-overline-from-center" onclick="handleClickNavItem()"
-                        href="#skills">Habilidades</a></li>
-                <li class="nav_item"><a class="hvr-overline-from-center" onclick="handleClickNavItem()"
-                        href="#project">Proyectos</a></li>
-                <li class="nav_item"><a class="hvr-overline-from-center" onclick="handleClickNavItem()"
-                        href="#contact">Contactos</a></li>
+            <button type="button" class="checkbtn" id="nav_toggle" aria-expanded="false" aria-controls="nav_lista"
+                aria-label="Abrir menú de navegación">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul class="nav_lista" id="nav_lista">
+                <li class="nav_item"><a class="hvr-overline-from-center" href="#about_me">Sobre Mí</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="#skills">Habilidades</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="#project">Proyectos</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="#contact">Contactos</a></li>
             </ul>
         </nav>
-    </Header>
+    </header>
     <main id="contenedor_principal">
-        <a href="#" class="to-top">
-            <i class="fa-solid fa-arrow-up fa-2xl" style="color: #ffffff;"></i>
+        <a href="#home" class="to-top" aria-label="Volver arriba">
+            <i class="fa-solid fa-arrow-up fa-2xl" style="color: #ffffff;" aria-hidden="true"></i>
         </a>
-        <section id="home" class="container-fluid">
-            <div class="row vh-100 justify-content-center align-self-center text-center animate__fadeInUp">
-                <div class="container_presentacion">
-                    <p class="name tracking-in-contract-bck">Hola, soy Jose Hernandez</p>
-                    <p class="present">
-                        Desarrollador Full Stack apasionado por construir soluciones digitales eficientes,<br>
-                        con experiencia en frontend, backend, bases de datos e inteligencia artificial.
-                    </p>
-                    <a class="hvr-sweep-to-top" id="btn_cv"
+        <section id="home">
+            <canvas id="hero_canvas" class="hero_bg" aria-hidden="true"></canvas>
+            <div class="container_presentacion animate__fadeInUp">
+                <p class="hero_tag">Costa Rica &nbsp;/&nbsp; <b>Full-Stack &amp; AI Agent Developer</b></p>
+                <h1 class="name">Jose<br>Hernandez</h1>
+                <p class="hero_role"><span class="prompt">&gt;</span><span id="typewriter"></span><span
+                        class="cursor"></span></p>
+                <p class="present">
+                    Desarrollador <b>full-stack</b> con más de 3 años programando. Hago el frontend, el backend en
+                    Python y el despliegue en AWS. Últimamente, casi todo mi tiempo va a construir <b>agentes de IA</b>
+                    y sistemas <b>RAG</b>.
+                </p>
+                <div class="hero_actions">
+                    <a id="btn_cv"
                         href="https://drive.google.com/file/d/1zOFiI6scH-VWHzkvXR-R9mXrCzrMHuZt/view?usp=sharing"
-                        target="_blank">descargar cv</a>
+                        target="_blank" rel="noopener">descargar cv</a>
+                    <a class="btn_ghost" href="#project">ver proyectos</a>
                 </div>
             </div>
         </section>
-        <section id="about_me" class="container-fluid">
-            <div id="titulo_about_me" class="row justify-content-center align-self-center text-center">
-                <hr id="line_up" style="width: 175px;" class="border border-white border-2 opacity-50">
-                <h1 class="titulo">Sobre Mí</h1>
-                <hr id="line_down" style="width: 175px;" class="border border-white border-2 opacity-50">
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker__track">
+                AI Agents <b>/</b> <span>RAG</span> <b>/</b> LangGraph <b>/</b> <span>AWS Bedrock</span> <b>/</b> Pinecone
+                <b>/</b> <span>FastAPI</span> <b>/</b> Python <b>/</b> <span>Docker</span> <b>/</b> Linux <b>/</b>
+                AI Agents <b>/</b> <span>RAG</span> <b>/</b> LangGraph <b>/</b> <span>AWS Bedrock</span> <b>/</b> Pinecone
+                <b>/</b> <span>FastAPI</span> <b>/</b> Python <b>/</b> <span>Docker</span> <b>/</b> Linux <b>/</b>
             </div>
-            <div class="row justify-content-center pt-3">
-                <div class="col-12 col-md-10 col-lg-8 d-flex align-self-center text-center justify-content-center">
-                    <p id="description">
-                        ¡Hola! Soy José Alfredo Hernández Arguello, desarrollador Full Stack con experiencia en
-                        tecnologías de frontend, backend, bases de datos e inteligencia artificial. Me formé en el INA
-                        (Instituto Nacional de Aprendizaje) de Costa Rica, y me mantengo constantemente actualizado
-                        explorando nuevas herramientas y tendencias del desarrollo de software.
-                        <br><br>
-                        Me apasiona construir sitios web, aplicaciones móviles y sistemas robustos que sean tanto
-                        funcionales como visualmente atractivos, siempre alineados con las necesidades reales de cada
-                        proyecto. Mi compromiso es entregar soluciones de calidad que generen valor y superen las
-                        expectativas.
-                        <br><br>
-                        Si tenés un proyecto en mente o necesitás apoyo en algún aspecto del desarrollo, no dudes en
-                        escribirme. Estoy disponible para colaborar y construir algo que marque la diferencia.
-                    </p>
+        </div>
+        <section id="about_me">
+            <div class="sec-head">
+                <span class="sec-idx">(01)</span>
+                <h2 class="titulo">Sobre Mí</h2>
+                <span class="sec-rule"></span>
+            </div>
+            <div class="about_grid">
+                <p id="description">
+                    ¡Hola! Soy <strong>José Alfredo Hernández Argüello</strong>, desarrollador <strong>Full
+                        Stack</strong> costarricense con <span class="hl">más de 3 años de experiencia</span>
+                    construyendo software de extremo a extremo. Empecé brindando <strong>soporte técnico en contact
+                        centers</strong>, donde aprendí a resolver problemas bajo presión y a entender de verdad al
+                    usuario final.
+                    <br><br>
+                    Desde ahí evolucioné hacia el desarrollo de <strong>sistemas omnicanales</strong> y, más
+                    recientemente, a la creación de <span class="hl">agentes de inteligencia artificial</span>. Me
+                    especializo en backend con <strong>Python</strong> y <strong>C#/.NET</strong>, APIs con
+                    <strong>FastAPI</strong> y agentes con <strong>LangChain / LangGraph</strong>, apoyado en un amplio
+                    conocimiento de entornos <span class="hl">cloud (AWS) y Linux</span>.
+                    <br><br>
+                    Me formé como <strong>Técnico en Programador de Aplicaciones Informáticas</strong> en el
+                    <strong>INA</strong> (Costa Rica) y me mantengo en constante actualización. Si buscás a alguien que
+                    combine visión de producto, soporte al usuario y desarrollo técnico sólido, hablemos.
+                </p>
+                <div class="terminal_card">
+                    <div class="terminal_bar">
+                        <span class="t_red"></span><span class="t_yellow"></span><span class="t_green"></span>
+                        <span class="t_title">jose@portfolio: ~</span>
+                    </div>
+                    <div class="terminal_body">
+                        <div class="row_t"><span class="key">whoami</span><span class="arrow">→</span><span
+                                class="val">José Hernández</span></div>
+                        <div class="row_t"><span class="key">role</span><span class="arrow">→</span><span
+                                class="val">Full Stack &amp; AI Agent Dev</span></div>
+                        <div class="row_t"><span class="key">exp</span><span class="arrow">→</span><span class="val">3+
+                                años</span></div>
+                        <div class="row_t"><span class="key">focus</span><span class="arrow">→</span><span
+                                class="val">Backend · IA · Cloud</span></div>
+                        <div class="row_t"><span class="key">stack</span><span class="arrow">→</span><span
+                                class="val">Python · C# · FastAPI · LangChain</span></div>
+                        <div class="row_t"><span class="key">cloud</span><span class="arrow">→</span><span
+                                class="val">AWS · Linux · Docker</span></div>
+                        <div class="row_t"><span class="key">base</span><span class="arrow">→</span><span
+                                class="val">Costa Rica</span></div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="skills" class="container-fluid pt-5">
-            <div id="titulo_skill" class="row justify-content-center align-self-center text-center">
-                <hr id="line_up" style="width: 175px;" class="border border-white border-2 opacity-50">
-                <h1 class="titulo">Habilidades</h1>
-                <hr id="line_down" style="width: 175px;" class="border border-white border-2 opacity-50">
+        <section id="skills">
+            <div class="sec-head">
+                <span class="sec-idx">(02)</span>
+                <h2 class="titulo">Habilidades</h2>
+                <span class="sec-rule"></span>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 text-center">
-                    <p id="description_skills">
-                        Como programador junior he desarrollado aplicaciones web, de escritorio y móviles, trabajando
-                        tanto en frontend como en backend. He colaborado en la implementación de software en empresas,
-                        adquiriendo habilidades en trabajo en equipo y gestión de proyectos. También tengo experiencia
-                        en diseño y mantenimiento de bases de datos, garantizando la integridad y eficiencia de los
-                        datos.
-                    </p>
+            <p id="description_skills">
+                Stack con el que llevo una idea de la terminal a producción, con foco en <b>agentes de IA</b> y
+                sistemas <b>RAG</b>: orquestación con LangChain / LangGraph sobre AWS Bedrock, APIs en Python y
+                despliegue en cloud y Linux — sin descuidar el backend y el frontend de extremo a extremo.
+            </p>
+            <dl class="stack-list">
+                <div class="stack-row hot">
+                    <dt>IA / Agentes</dt>
+                    <dd>
+                        <span>LangChain</span><span>LangGraph</span><span>AWS Bedrock</span><span>AWS Agent Core</span>
+                    </dd>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="skills_wrapper col-12 col-md-10 col-lg-8">
-
-                    <div class="skills_group">
-                        <span class="skills_category">Frontend</span>
-                        <div class="skills_fila">
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png"
-                                    alt="HTML5" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">HTML</span>
-                                </div>
-                            </div>
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="CSS3" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">CSS</span>
-                                </div>
-                            </div>
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png"
-                                    alt="JavaScript" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">JavaScript</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="skills_group">
-                        <span class="skills_category">IA</span>
-                        <div class="skills_fila">
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://cdn.simpleicons.org/langchain/ffffff" alt="LangChain" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">LangChain</span>
-                                </div>
-                            </div>
-                            <div class="contenedor_skill">
-                                <img width="48" height="48"
-                                    src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="LangGraph" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">LangGraph</span>
-                                </div>
-                            </div>
-                            <div class="contenedor_skill">
-                                <img width="48" height="48"
-                                    src="https://img.icons8.com/color/48/amazon-web-services.png" alt="AWS Bedrock" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">AWS Bedrock</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skills_group">
-                        <span class="skills_category">Backend</span>
-                        <div class="skills_fila">
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/c-sharp-logo.png" alt="C#" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">C#</span>
-                                </div>
-                            </div>
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/python--v1.png"
-                                    alt="Python" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">Python</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skills_group">
-                        <span class="skills_category">Base de Datos</span>
-                        <div class="skills_fila">
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/mysql-logo.png"
-                                    alt="MySQL" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">MySQL</span>
-                                </div>
-                            </div>
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/postgreesql.png"
-                                    alt="PostgreSQL" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">PostgreSQL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skills_group">
-                        <span class="skills_category">DevOps</span>
-                        <div class="skills_fila">
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/docker.png"
-                                    alt="Docker" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">Docker</span>
-                                </div>
-                            </div>
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/nginx.png"
-                                    alt="Nginx" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">Nginx</span>
-                                </div>
-                            </div>
-                            <div class="contenedor_skill">
-                                <img width="48" height="48"
-                                    src="https://img.icons8.com/color/48/amazon-web-services.png" alt="AWS" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">AWS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skills_group">
-                        <span class="skills_category">Versionado</span>
-                        <div class="skills_fila">
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="Git" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">Git</span>
-                                </div>
-                            </div>
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/github--v1.png"
-                                    alt="GitHub" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">GitHub</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="skills_group">
-                        <span class="skills_category">SO</span>
-                        <div class="skills_fila">
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/linux.png"
-                                    alt="Linux" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">Linux</span>
-                                </div>
-                            </div>
-                            <div class="contenedor_skill">
-                                <img width="48" height="48" src="https://img.icons8.com/color/48/windows-11.png"
-                                    alt="Windows" />
-                                <div class="contenedor_pogress">
-                                    <span class="name_skill">Windows</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="stack-row">
+                    <dt>Lenguajes</dt>
+                    <dd>
+                        <span>Python</span><span>C#</span><span>JavaScript</span><span>SQL</span><span>HTML / CSS</span>
+                    </dd>
                 </div>
-            </div>
+                <div class="stack-row">
+                    <dt>Frameworks</dt>
+                    <dd><span>FastAPI</span><span>.NET</span></dd>
+                </div>
+                <div class="stack-row">
+                    <dt>Bases de datos</dt>
+                    <dd><span>PostgreSQL</span><span>MySQL</span><span>SQL Server</span><span>Pinecone</span></dd>
+                </div>
+                <div class="stack-row">
+                    <dt>Cloud / DevOps</dt>
+                    <dd><span>AWS</span><span>Docker</span><span>Nginx</span></dd>
+                </div>
+                <div class="stack-row">
+                    <dt>Sistemas Operativos</dt>
+                    <dd><span>Linux</span><span>Windows</span></dd>
+                </div>
+                <div class="stack-row">
+                    <dt>IDEs / Herramientas</dt>
+                    <dd><span>Claude Code</span><span>Git</span></dd>
+                </div>
+            </dl>
+
+            <h3 class="certs_title">Certificaciones</h3>
+            <ul class="certs">
+                <li class="cert">
+                    <span class="cert__idx">01</span>
+                    <div class="cert__main">
+                        <span class="cert__name">Técnico en Programador de Aplicaciones Informáticas</span>
+                        <span class="cert__issuer">INA · Instituto Nacional de Aprendizaje, Costa Rica</span>
+                    </div>
+                    <span class="cert__date">20XX</span>
+                    <span class="cert__cred is-empty">sin credencial online</span>
+                </li>
+                <li class="cert is-placeholder">
+                    <span class="cert__idx">02</span>
+                    <div class="cert__main">
+                        <span class="cert__name">AWS Cloud Essentials <span class="ph">placeholder</span></span>
+                        <span class="cert__issuer">Amazon Web Services</span>
+                    </div>
+                    <span class="cert__date">20XX</span>
+                    <a class="cert__cred" href="#" aria-label="Ver credencial (placeholder)">ver credencial ↗</a>
+                </li>
+                <li class="cert is-placeholder">
+                    <span class="cert__idx">03</span>
+                    <div class="cert__main">
+                        <span class="cert__name">Certificación IA / Agentes <span class="ph">placeholder</span></span>
+                        <span class="cert__issuer">Entidad emisora</span>
+                    </div>
+                    <span class="cert__date">20XX</span>
+                    <a class="cert__cred" href="#" aria-label="Ver credencial (placeholder)">ver credencial ↗</a>
+                </li>
+            </ul>
         </section>
-        <section id="project" class="pt-5">
-            <div id="titulo_project" class="">
-                <hr id="line_up" style="width: 175px;" class="border border-white border-2 opacity-50">
-                <h1 class="titulo">Proyectos</h1>
-                <hr id="line_down" style="width: 175px;" class="border border-white border-2 opacity-50">
+        <section id="project">
+            <div class="sec-head">
+                <span class="sec-idx">(03)</span>
+                <h2 class="titulo">Proyectos</h2>
+                <span class="sec-rule"></span>
             </div>
-            <div id="contenedor_carousel_mobile">
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="IMG/mobile (1).png" height="200px" class="d-block mx-auto" alt="Proyecto 1">
+            <div class="projects_grid">
+
+                <article class="project_card">
+                    <div class="project_media is-anim">
+                        <svg class="atom-anim" viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" role="img"
+                            focusable="false"
+                            aria-label="Núcleo de un agente de IA con electrones orbitando — atom-agent-ia (Agent as a Service)">
+                            <style>
+                                .aai-orbit{fill:none;stroke:#454545;stroke-width:1.4}
+                                .aai-orbit.hi{stroke:#727272}
+                                .aai-electron{fill:#fff}
+                                .aai-core{fill:#fff}
+                                .aai-halo{fill:none;stroke:#fff;stroke-opacity:.22;stroke-width:1}
+                                .aai-pulse{fill:none;stroke:#fff;stroke-width:1.2;opacity:0;transform-box:view-box;transform-origin:180px 100px}
+                                .aai-spin{transform-box:view-box;transform-origin:180px 100px}
+                                .aai-o1{transform:rotate(0deg);animation:aai-s1 9s linear infinite}
+                                .aai-o2{transform:rotate(60deg);animation:aai-s2 12s linear infinite}
+                                .aai-o3{transform:rotate(120deg);animation:aai-s3 15s linear infinite}
+                                @keyframes aai-s1{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+                                @keyframes aai-s2{from{transform:rotate(60deg)}to{transform:rotate(420deg)}}
+                                @keyframes aai-s3{from{transform:rotate(120deg)}to{transform:rotate(-240deg)}}
+                                .aai-core{animation:aai-breathe 3.2s ease-in-out infinite}
+                                @keyframes aai-breathe{0%,100%{opacity:1}50%{opacity:.55}}
+                                .aai-pulse{animation:aai-ping 3.6s ease-out infinite}
+                                .aai-pulse.p2{animation-delay:1.8s}
+                                @keyframes aai-ping{0%{transform:scale(.35);opacity:.5}70%{opacity:0}100%{transform:scale(1.75);opacity:0}}
+                                @media (prefers-reduced-motion:reduce){
+                                    .aai-o1,.aai-o2,.aai-o3,.aai-core{animation:none}
+                                    .aai-pulse{display:none}
+                                }
+                            </style>
+                            <circle class="aai-pulse" cx="180" cy="100" r="28" />
+                            <circle class="aai-pulse p2" cx="180" cy="100" r="28" />
+                            <g class="aai-spin aai-o1">
+                                <ellipse class="aai-orbit hi" cx="180" cy="100" rx="92" ry="33" />
+                                <circle class="aai-electron" cx="272" cy="100" r="4" />
+                            </g>
+                            <g class="aai-spin aai-o2">
+                                <ellipse class="aai-orbit" cx="180" cy="100" rx="92" ry="33" />
+                                <circle class="aai-electron" cx="272" cy="100" r="3.4" />
+                            </g>
+                            <g class="aai-spin aai-o3">
+                                <ellipse class="aai-orbit" cx="180" cy="100" rx="92" ry="33" />
+                                <circle class="aai-electron" cx="272" cy="100" r="3.4" />
+                            </g>
+                            <circle class="aai-halo" cx="180" cy="100" r="15" />
+                            <circle class="aai-core" cx="180" cy="100" r="8" />
+                        </svg>
+                    </div>
+                    <div class="project_body">
+                        <h3 class="project_title">atom-agent-ia</h3>
+                        <p class="project_desc">
+                            Plataforma <strong>AaaS (Agent as a Service)</strong> construida con <strong>FastAPI</strong>
+                            y <strong>LangChain</strong>: expone agentes de IA como servicio a través de una API, con
+                            endpoints para ejecutar agentes, chatear, invocar herramientas y transmitir respuestas en
+                            streaming.
+                        </p>
+                        <div class="project_tags">
+                            <span>Python</span><span>FastAPI</span><span>LangChain</span><span>AaaS</span>
                         </div>
-                        <div class="carousel-item">
-                            <img src="IMG/mobile (2).png" height="250px" class="d-block mx-auto" alt="Proyecto 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="IMG/mobile (3).png" height="200px" class="d-block mx-auto" alt="Proyecto 3">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="IMG/mobile (5).png" height="200px" class="d-block mx-auto" alt="Proyecto 4">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="IMG/mobile (6).png" height="200px" class="d-block mx-auto" alt="Proyecto 5">
+                        <div class="project_links">
+                            <span class="project_private"><i class="fa-solid fa-lock"></i> Repo privado</span>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
-                </div>
-            </div>
-            <div class="slider">
-                <div class="controls">
-                    <div class="up" aria-label="Proyecto anterior">
-                        <i class="fa fa-chevron-up"></i>
+                </article>
+
+                <article class="project_card">
+                    <div class="project_media">
+                        <img src="IMG/mobile sis.png"
+                            alt="Dashboard del sistema de Gestión de Casos Presupuestarios de A y M Consultores">
                     </div>
-                    <div class="down" aria-label="Proyecto siguiente">
-                        <i class="fa fa-chevron-down"></i>
+                    <div class="project_body">
+                        <h3 class="project_title">Gestión de Casos Presupuestarios</h3>
+                        <p class="project_desc">
+                            Sistema integral para la oficina contable <strong>A&amp;M Consultores</strong>, en
+                            colaboración con Kelvin García. Desarrollado en <strong>C# / .NET</strong> con Entity
+                            Framework, LINQ y SQL Server bajo arquitectura por capas, para el seguimiento de auditorías
+                            presupuestarias de escuelas de principio a fin.
+                        </p>
+                        <div class="project_tags">
+                            <span>C#</span><span>.NET</span><span>EF</span><span>SQL Server</span>
+                        </div>
+                        <div class="project_links">
+                            <span class="project_private"><i class="fa-solid fa-lock"></i> Privado</span>
+                        </div>
                     </div>
-                </div>
-                <div class="wrapper">
-                    <div class="left">
-                        <div>
-                            <h2>Clon sitio web INS</h2>
-                            <p>
-                                Durante mi formación académica, tuve la oportunidad de desarrollar y mejorar un sitio
-                                web
-                                para el INS (Instituto Nacional de Seguros) utilizando Bootstrap, HTML, CSS y
-                                JavaScript.
-                                El objetivo principal fue mejorar la experiencia del usuario e introducir un modo
-                                dinámico
-                                de tema oscuro y claro. Aunque fue un proyecto académico, representó una experiencia de
-                                aprendizaje invaluable que enriqueció mis habilidades prácticas de desarrollo web.
-                            </p>
-                            <a href="https://github.com/joseaha/ClonPaginaINS.git" target="_blank"
-                                aria-label="Ver proyecto en GitHub">
-                                <i class="fa-brands fa-github fa-2xl"
-                                    style="color: #ffff; text-decoration: none; margin-top: 10px;"></i>
-                            </a>
+                </article>
+
+                <article class="project_card">
+                    <div class="project_media">
+                        <img src="IMG/mobile (6).png" alt="Vista de escritorio del portfolio de Jose Hernandez">
+                    </div>
+                    <div class="project_body">
+                        <h3 class="project_title">Portfolio Dev</h3>
+                        <p class="project_desc">
+                            Este mismo portfolio: un sitio estático con enfoque <strong>brutalista monocromo</strong>
+                            (inspiración techno), construido con HTML, CSS y JavaScript vanilla y desplegado en GitHub
+                            Pages. En evolución constante conforme sumo proyectos y habilidades.
+                        </p>
+                        <div class="project_tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span>
                         </div>
-                        <div>
-                            <h2>Gestión de Casos Presupuestarios</h2>
-                            <p>
-                                Proyecto realizado en colaboración con Kelvin Garcia para la oficina contable "AYM
-                                Consultores".
-                                Consistió en la creación de un sistema integral en C# con Entity Framework, Linq y SQL
-                                Server,
-                                aplicando arquitectura por capas. El objetivo fue permitir el seguimiento eficiente de
-                                auditorías
-                                presupuestarias administrativas de escuelas, desde su creación hasta aprobación y
-                                archivo final.
-                            </p>
-                        </div>
-                        <div>
-                            <h2>Portfolio Dev Jose Hernandez</h2>
-                            <p>
-                                Crear mi primer portfolio fue una experiencia emocionante. Es una herramienta que
-                                muestra
-                                mi trabajo y habilidades, pero también refleja mi crecimiento profesional. Aprendí a
-                                seleccionar mis proyectos cuidadosamente y presentarlos de forma impactante. Mi objetivo
-                                es seguir mejorándolo continuamente, incorporando nuevos proyectos y habilidades
-                                relevantes.
-                            </p>
+                        <div class="project_links">
                             <a href="https://github.com/joseaha/joseaha.github.io" target="_blank"
-                                aria-label="Ver portfolio en GitHub">
-                                <i class="fa-brands fa-github fa-2xl"
-                                    style="color: #ffff; text-decoration: none; margin-top: 10px;"></i>
-                            </a>
+                                aria-label="Ver portfolio en GitHub"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
-                    <div class="right">
-                        <div>
-                            <img class="img_project" src="IMG/mobile (5).png" alt="Captura proyecto INS 1">
-                            <img class="img_project" src="IMG/mobile (6).png" alt="Captura proyecto INS 2">
-                        </div>
-                        <div>
-                            <img class="img_project" src="IMG/mobile sis.png" alt="Captura sistema presupuestario">
-                        </div>
-                        <div>
-                            <img class="img_project" src="IMG/mobile (1).png" alt="Captura portfolio 1">
-                            <img class="img_project" src="IMG/mobile (2).png" alt="Captura portfolio 2">
-                        </div>
-                    </div>
-                </div>
+                </article>
+
             </div>
         </section>
-        <section id="contact" class="p-5">
-            <div class="container">
-                <div id="titulo_project">
-                    <hr id="line_up" style="width: 175px;" class="border border-white border-2 opacity-50">
-                    <h1 class="titulo">Contacto</h1>
-                    <hr id="line_down" style="width: 175px;" class="border border-white border-2 opacity-50">
+        <section id="contact">
+            <div class="contact_inner">
+                <div class="sec-head">
+                    <span class="sec-idx">(04)</span>
+                    <h2 class="titulo">Contacto</h2>
+                    <span class="sec-rule"></span>
                 </div>
-                <div class="row text-center">
-                    <h5>Sentite libre de contactarme mediante el formulario y te responderé a la brevedad posible</h5>
-                </div>
-                <div class="mt-3 footer_title">
-                    <i class="fa-regular fa-envelope fa-2xl m-3" style="color: #ffffff;"></i>
+                <p class="contact_lead">Sentite libre de contactarme mediante el formulario y te responderé a la
+                    brevedad posible.</p>
+                <p class="contact_mail">
+                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
                     <span>josedevcr@gmail.com</span>
-                </div>
-                <div class="row d-flex justify-content-center align-self-center pt-5">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                        <form action="https://formsubmit.co/josedevcr@gmail.com" method="POST">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Nombre</label>
-                                <input id="name" name="name" type="text" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="mail" class="form-label">Correo electrónico</label>
-                                <input type="email" name="email" class="form-control" id="mail">
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-                            </div>
-                            <div class="d-grid gap-2 col-6 mx-auto">
-                                <button id="btnForm" class="btn" type="submit">Enviar</button>
-                            </div>
-                        </form>
+                </p>
+                <form class="contact_form" action="https://formsubmit.co/josedevcr@gmail.com" method="POST">
+                    <div class="field">
+                        <label for="name">Nombre</label>
+                        <input id="name" name="name" type="text">
                     </div>
-                </div>
+                    <div class="field">
+                        <label for="mail">Correo electrónico</label>
+                        <input type="email" name="email" id="mail">
+                    </div>
+                    <div class="field">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button id="btnForm" type="submit">Enviar</button>
+                </form>
             </div>
         </section>
     </main>
     <footer>
-        <div class="container-fluid">
-            <div class="row justify-content-center py-5">
-                <div class="col-12 text-center">
-                    <p class="footer_name mb-1">Jose Hernandez</p>
-                    <p class="footer_tagline mb-4">Full Stack Developer · Costa Rica</p>
-                    <div class="footer_socials">
-                        <a href="https://github.com/joseaha" aria-label="GitHub" class="footer_social_link">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/jose-alfredo-hernandez-arguello-jaha" aria-label="LinkedIn"
-                            class="footer_social_link">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.facebook.com/jose.jh.jaha" aria-label="Facebook"
-                            class="footer_social_link">
-                            <i class="fa-brands fa-square-facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/jose_hernandezupa/" aria-label="Instagram"
-                            class="footer_social_link">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
+        <div class="footer_inner">
+            <p class="footer_name">Jose Hernandez</p>
+            <p class="footer_tagline">Full Stack &amp; AI Agent Developer · Costa Rica</p>
+            <div class="footer_socials">
+                <a href="https://github.com/joseaha" aria-label="GitHub" class="footer_social_link">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jose-alfredo-hernandez-arguello-jaha" aria-label="LinkedIn"
+                    class="footer_social_link">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.facebook.com/jose.jh.jaha" aria-label="Facebook" class="footer_social_link">
+                    <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/jose_hernandezupa/" aria-label="Instagram"
+                    class="footer_social_link">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
             </div>
-            <div class="row footer_title text-center pb-3">
-                <hr style="width: 97%;" class="border border-white border-1 opacity-25">
-                <p class="footer_copy">© Copyright 2026. Hecho por Jose Hernandez Arguello</p>
-            </div>
+            <hr class="footer_hr">
+            <p class="footer_copy">© Copyright 2026. Hecho por Jose Hernandez Arguello</p>
         </div>
     </footer>
 </body>
 <script src="JS/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
 
 </html>
