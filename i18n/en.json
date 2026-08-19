@@ -61,7 +61,7 @@
   "projectDetail.demo": "Demo ↗",
   "proj.atom.title": "atom-agent-ia",
   "proj.atom.desc": "An <strong>AaaS (Agent as a Service)</strong> platform built with <strong>FastAPI</strong> and <strong>LangChain</strong>: exposes AI agents as a service through an API, with endpoints to run agents, chat, invoke tools, and stream responses.",
-  "proj.atom.private": "Private repo",
+  "proj.atom.private": "Private",
   "proj.casos.title": "Budget Case Management System",
   "proj.casos.desc": "A full system for the accounting firm <strong>A&amp;M Consultores</strong>, built in collaboration with Kelvin García. Developed in <strong>C# / .NET</strong> with Entity Framework, LINQ, and SQL Server on a layered architecture, to track school budget audits from start to finish.",
   "proj.casos.private": "Private",

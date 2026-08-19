@@ -61,7 +61,7 @@
   "projectDetail.demo": "Demo ↗",
   "proj.atom.title": "atom-agent-ia",
   "proj.atom.desc": "Plataforma <strong>AaaS (Agent as a Service)</strong> construida con <strong>FastAPI</strong> y <strong>LangChain</strong>: expone agentes de IA como servicio a través de una API, con endpoints para ejecutar agentes, chatear, invocar herramientas y transmitir respuestas en streaming.",
-  "proj.atom.private": "Repo privado",
+  "proj.atom.private": "Privado",
   "proj.casos.title": "Gestión de Casos Presupuestarios",
   "proj.casos.desc": "Sistema integral para la oficina contable <strong>A&amp;M Consultores</strong>, en colaboración con Kelvin García. Desarrollado en <strong>C# / .NET</strong> con Entity Framework, LINQ y SQL Server bajo arquitectura por capas, para el seguimiento de auditorías presupuestarias de escuelas de principio a fin.",
   "proj.casos.private": "Privado",

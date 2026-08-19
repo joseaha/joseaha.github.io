@@ -916,6 +916,10 @@ nav li a:hover {
     white-space: nowrap;
 }
 
+.project_topbar span:last-child {
+    flex-shrink: 0;
+}
+
 .project_media {
     position: relative;
     aspect-ratio: 16 / 10;
@@ -999,6 +1003,7 @@ nav li a:hover {
     text-transform: uppercase;
     color: var(--fg);
     margin: 0;
+    text-wrap: balance;
 }
 
 .project_desc {
@@ -1036,10 +1041,16 @@ nav li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    flex-wrap: wrap;
+    gap: 8px 16px;
     margin-top: 4px;
     padding-top: 14px;
     border-top: 1px solid var(--line);
+}
+
+.project_links .detail_link,
+.project_links .project_private {
+    white-space: nowrap;
 }
 
 .project_links a {
