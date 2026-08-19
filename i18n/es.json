@@ -68,6 +68,7 @@
   "proj.portfolio.title": "Portfolio Dev",
   "proj.portfolio.desc": "Este mismo portfolio: un sitio estático con enfoque <strong>brutalista monocromo</strong> (inspiración techno), construido con HTML, CSS y JavaScript vanilla, con tema claro/oscuro e idiomas es/en, desplegado en GitHub Pages. En evolución constante conforme sumo proyectos y habilidades.",
   "proj.portfolio.githubLabel": "Ver portfolio en GitHub",
+  "proj.portfolio.badge": "Open Source",
 
   "contact.sectionTitle": "Contacto",
   "contact.lead": "¿Tienes un proyecto o una vacante donde encaje? Escríbeme y te responderé a la brevedad posible.",

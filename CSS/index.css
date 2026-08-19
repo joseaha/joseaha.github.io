@@ -860,75 +860,35 @@ nav li a:hover {
     border-top: 1px solid var(--line);
 }
 
+/* galería de proyectos (estilo tienda: imagen dominante, caption mínima, sin cajas) */
 .projects_grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56px 24px;
     max-width: var(--maxw);
     margin: 0 auto;
 }
 
-@media (max-width: 900px) {
-    .projects_grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.gallery_item {
+    display: block;
 }
 
-@media (max-width: 640px) {
-    .projects_grid {
-        grid-template-columns: 1fr;
-        max-width: 440px;
-    }
+.gallery_item--wide {
+    grid-column: 1 / -1;
 }
 
-.project_card {
-    display: flex;
-    flex-direction: column;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    overflow: hidden;
-    transition: border-color .25s, transform .25s;
-}
-
-.project_card:hover {
-    border-color: var(--fg);
-    transform: translateY(-4px);
-}
-
-/* barra superior de la tarjeta: slug + índice, unifica las 3 tarjetas */
-.project_topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 8px 14px;
-    border-bottom: 1px solid var(--line);
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: var(--muted-2);
-    background: var(--surface);
-}
-
-.project_topbar span {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.project_topbar span:last-child {
-    flex-shrink: 0;
-}
-
-.project_media {
+.gallery_media {
     position: relative;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
-    border-bottom: 1px solid var(--line);
-    background: var(--bg);
+    background: var(--surface);
 }
 
-.project_media img {
+.gallery_item--wide .gallery_media {
+    aspect-ratio: 21 / 9;
+}
+
+.gallery_media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -937,22 +897,107 @@ nav li a:hover {
     transition: filter .4s ease, transform .5s ease;
 }
 
-.project_card:hover .project_media img {
+.gallery_item:hover .gallery_media img,
+.gallery_item:focus-visible .gallery_media img {
     filter: grayscale(0);
-    transform: scale(1.04);
+    transform: scale(1.03);
 }
 
-/* tarjeta con animación (atom-agent-ia) en vez de foto */
-.project_media.is-anim {
+/* pieza con animación (atom-agent-ia) en vez de foto */
+.gallery_media.is-anim {
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--surface-2);
 }
 
-.project_media.is-anim .atom-anim {
+.gallery_media.is-anim .atom-anim {
     width: 100%;
     height: 100%;
+}
+
+/* badge sobre la imagen (como "Sold out" en una tienda) */
+.gallery_badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: rgba(var(--bg-rgb), 0.85);
+    border: 1px solid var(--line-2);
+    padding: 5px 9px;
+}
+
+.gallery_caption {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.gallery_titlerow {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.gallery_title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--fg);
+    margin: 0;
+    text-wrap: balance;
+}
+
+.gallery_arrow {
+    font-family: var(--font-mono);
+    color: var(--fg);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+.gallery_item:hover .gallery_arrow,
+.gallery_item:focus-visible .gallery_arrow {
+    opacity: 1;
+    transform: none;
+}
+
+.gallery_idx {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted-2);
+}
+
+.gallery_meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .projects_grid {
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+
+    .gallery_item--wide .gallery_media {
+        aspect-ratio: 4 / 3;
+    }
 }
 
 /* atom-agent-ia: núcleo orbital animado */
@@ -987,40 +1032,7 @@ nav li a:hover {
     .aai-pulse { display: none; }
 }
 
-.project_body {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 22px;
-    flex: 1;
-}
-
-.project_title {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 20px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: var(--fg);
-    margin: 0;
-    text-wrap: balance;
-}
-
-.project_desc {
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--muted);
-    margin: 0;
-    flex: 1;
-}
-
-.project_desc strong {
-    color: var(--fg);
-    font-weight: 500;
-}
-
+/* .project_tags se usa en las páginas de detalle de proyecto */
 .project_tags {
     display: flex;
     flex-wrap: wrap;
@@ -1035,59 +1047,6 @@ nav li a:hover {
     color: var(--muted);
     padding: 4px 9px;
     border: 1px solid var(--line-2);
-}
-
-.project_links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    margin-top: 4px;
-    padding-top: 14px;
-    border-top: 1px solid var(--line);
-}
-
-.project_links .detail_link,
-.project_links .project_private {
-    white-space: nowrap;
-}
-
-.project_links a {
-    color: var(--muted);
-    font-size: 19px;
-    transition: color .2s;
-}
-
-.project_links a:hover {
-    color: var(--fg);
-}
-
-.project_links a.detail_link {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--fg);
-    border-bottom: 1px solid var(--line-2);
-    transition: border-color .2s;
-}
-
-.project_links a.detail_link:hover {
-    color: var(--fg);
-    border-color: var(--fg);
-}
-
-.project_private {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--muted-2);
 }
 
 /* ****************************** */
