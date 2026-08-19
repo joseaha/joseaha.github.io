@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A full system to track school budget audits, from start to finish.">
+    <title>Budget Case Management System · Jose Hernandez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/project.css">
+    <link rel="icon" href="/IMG/dev.png">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+
+<body data-project-page="gestion-casos-presupuestarios">
+    <header>
+        <nav class="nav_font" aria-label="Main navigation" data-i18n-attr="aria-label:nav.ariaLabel">
+            <div class="marca">
+                <a href="/index.html#home">Jose Hernandez</a>
+            </div>
+            <ul class="nav_lista" id="nav_lista">
+                <li class="nav_item"><a class="hvr-overline-from-center" href="/index.html#about_me" data-i18n="nav.about">About</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="/index.html#skills" data-i18n="nav.skills">Skills</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="/index.html#project" data-i18n="nav.projects">Projects</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="/index.html#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav_tools">
+                <div class="lang_switch" role="group" aria-label="Idioma / Language">
+                    <button type="button" class="lang_btn" id="lang_es" data-lang="es" aria-current="false">ES</button>
+                    <button type="button" class="lang_btn" id="lang_en" data-lang="en" aria-current="true">EN</button>
+                </div>
+                <button type="button" class="theme_toggle" id="theme_toggle" aria-pressed="false"
+                    aria-label="Cambiar tema claro / oscuro">
+                    <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="checkbtn" id="nav_toggle" aria-expanded="false" aria-controls="nav_lista"
+                    aria-label="Open navigation menu" data-i18n-attr="aria-label:nav.openLabel">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main id="contenedor_principal">
+        <a href="#top" class="to-top" aria-label="Back to top" data-i18n-attr="aria-label:toTop.label">
+            <i class="fa-solid fa-arrow-up fa-2xl" aria-hidden="true"></i>
+        </a>
+        <article class="project_detail" id="top">
+            <div class="project_detail_head">
+                <a class="back_link" href="/index.html#project" data-i18n="projects.backLink">← Projects</a>
+                <h1 class="project_detail_title">Budget Case Management System</h1>
+                <p class="project_detail_subtitle">A full system to track school budget audits, from start to finish.</p>
+                <div class="project_detail_meta">
+                    <span><span class="meta_key" data-i18n="projectDetail.role">Role</span> · Co-developer (with Kelvin García)</span>
+                    <span><span class="meta_key" data-i18n="projectDetail.date">Date</span> · [PENDING: to complete]</span>
+                    <span><span class="meta_key" data-i18n="projectDetail.stack">Stack</span> · C# · .NET · Entity Framework · LINQ · SQL Server</span>
+                </div>
+                <div class="project_tags"><span>C#</span><span>.NET</span><span>EF</span><span>SQL Server</span></div>
+                <div class="project_detail_links"><span class="project_private"><i class="fa-solid fa-lock"></i> Private</span></div>
+            </div>
+            <div class="project_detail_cover">
+                <img src="/IMG/gestion-casos-presupuestarios-cover.png" alt="Budget Case Management System">
+            </div>
+            <div class="project_detail_body"><h2>Problem</h2>
+<p>The accounting firm <strong>A&amp;M Consultores</strong> was tracking school budget audits manually and across scattered sources, making it hard to see the status of each case and its supporting evidence at a glance.</p>
+<h2>Solution</h2>
+<p>A full system built in <strong>C# / .NET</strong>, in collaboration with Kelvin García, to centralize the tracking of school budget audits from start to finish: case registration, status control, and access to the relevant information for each audit from a single dashboard.</p>
+<h2>Stack &amp; Architecture</h2>
+<ul>
+<li><strong>C# / .NET</strong> with <strong>Entity Framework</strong> and <strong>LINQ</strong> for data access.</li>
+<li><strong>SQL Server</strong> as the database engine.</li>
+<li><strong>Layered architecture</strong>, separating business logic from data access and presentation.</li>
+</ul>
+<h2>Challenges</h2>
+<p>Modeling the full lifecycle of a budget audit — with its different statuses and stakeholders — inside a maintainable layered architecture, and coordinating team development with Kelvin García on a shared codebase.</p>
+<h2>Results</h2>
+<p>[PENDING: to complete] — the system is in internal use at A&amp;M Consultores; no public metrics since it's a private project.</p>
+</div>
+        </article>
+    </main>
+    <footer>
+        <div class="footer_inner">
+            <p class="footer_name">Jose Hernandez</p>
+            <p class="footer_tagline" data-i18n="footer.tagline">Full Stack &amp; AI Agent Developer · Costa Rica</p>
+            <div class="footer_socials">
+                <a href="https://github.com/joseaha" aria-label="GitHub" class="footer_social_link">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jose-alfredo-hernandez-arguello-jaha" aria-label="LinkedIn"
+                    class="footer_social_link">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.facebook.com/jose.jh.jaha" aria-label="Facebook" class="footer_social_link">
+                    <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/jose_hernandezupa/" aria-label="Instagram"
+                    class="footer_social_link">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+            <hr class="footer_hr">
+            <p class="footer_copy" data-i18n="footer.copy">© Copyright 2026. Made by Jose Hernandez Arguello</p>
+        </div>
+    </footer>
+</body>
+<script src="/JS/i18n.js"></script>
+<script src="/JS/theme.js"></script>
+<script src="/JS/index.js"></script>
+
+</html>

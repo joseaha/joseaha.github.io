@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" role="img"
+    aria-label="Núcleo de un agente de IA con electrones orbitando — atom-agent-ia (Agent as a Service)">
+    <!-- Sin fondo: hereda el color de superficie del tema (claro u oscuro). -->
+    <!-- Grises medios legibles sobre ambas superficies. -->
+    <g transform="translate(0,20)">
+        <ellipse cx="360" cy="180" rx="180" ry="64" fill="none" stroke="#8f8f8f" stroke-width="1.6" />
+        <ellipse cx="360" cy="180" rx="180" ry="64" fill="none" stroke="#8f8f8f" stroke-opacity="0.45" stroke-width="1.4"
+            transform="rotate(60 360 180)" />
+        <ellipse cx="360" cy="180" rx="180" ry="64" fill="none" stroke="#8f8f8f" stroke-opacity="0.45" stroke-width="1.4"
+            transform="rotate(120 360 180)" />
+        <circle cx="360" cy="180" r="16" fill="none" stroke="#8f8f8f" stroke-opacity="0.4" stroke-width="1" />
+        <circle cx="360" cy="180" r="9" fill="#8f8f8f" />
+        <circle cx="540" cy="180" r="5" fill="#8f8f8f" />
+        <circle cx="180" cy="180" r="4" fill="#8f8f8f" />
+    </g>
+</svg>

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
+    <meta name="description" data-i18n-attr="content:meta.description"
         content="Portfolio de José Alfredo Hernández Argüello, desarrollador Full Stack de Costa Rica con más de 3 años de experiencia en backend, agentes de IA (LangChain, FastAPI) y cloud.">
     <title>Jose Hernandez · Full Stack &amp; AI Agent Developer</title>
     <meta name="facebook-domain-verification" content="4epdpc0fccqcwlxppf7vlva2r5kch0" />
@@ -18,50 +17,65 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- CSS propio al final para que gane sobre Bootstrap -->
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="icon" href="IMG/dev.png">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
 </head>
 
 <body>
     <header>
-        <nav class="nav_font" aria-label="Navegación principal">
+        <nav class="nav_font" aria-label="Navegación principal" data-i18n-attr="aria-label:nav.ariaLabel">
             <div class="marca">
                 <a href="#home">Jose Hernandez</a>
             </div>
-            <button type="button" class="checkbtn" id="nav_toggle" aria-expanded="false" aria-controls="nav_lista"
-                aria-label="Abrir menú de navegación">
-                <i class="fa-solid fa-bars" aria-hidden="true"></i>
-            </button>
             <ul class="nav_lista" id="nav_lista">
-                <li class="nav_item"><a class="hvr-overline-from-center" href="#about_me">Sobre Mí</a></li>
-                <li class="nav_item"><a class="hvr-overline-from-center" href="#skills">Habilidades</a></li>
-                <li class="nav_item"><a class="hvr-overline-from-center" href="#project">Proyectos</a></li>
-                <li class="nav_item"><a class="hvr-overline-from-center" href="#contact">Contactos</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="#about_me" data-i18n="nav.about">Sobre Mí</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="#project" data-i18n="nav.projects">Proyectos</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="#contact" data-i18n="nav.contact">Contactos</a></li>
             </ul>
+            <div class="nav_tools">
+                <div class="lang_switch" role="group" aria-label="Idioma / Language">
+                    <button type="button" class="lang_btn" id="lang_es" data-lang="es" aria-current="true">ES</button>
+                    <button type="button" class="lang_btn" id="lang_en" data-lang="en">EN</button>
+                </div>
+                <button type="button" class="theme_toggle" id="theme_toggle" aria-pressed="false"
+                    aria-label="Cambiar tema claro / oscuro">
+                    <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="checkbtn" id="nav_toggle" aria-expanded="false" aria-controls="nav_lista"
+                    aria-label="Abrir menú de navegación" data-i18n-attr="aria-label:nav.openLabel">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
         </nav>
     </header>
     <main id="contenedor_principal">
-        <a href="#home" class="to-top" aria-label="Volver arriba">
-            <i class="fa-solid fa-arrow-up fa-2xl" style="color: #ffffff;" aria-hidden="true"></i>
+        <a href="#home" class="to-top" aria-label="Volver arriba" data-i18n-attr="aria-label:toTop.label">
+            <i class="fa-solid fa-arrow-up fa-2xl" aria-hidden="true"></i>
         </a>
         <section id="home">
             <canvas id="hero_canvas" class="hero_bg" aria-hidden="true"></canvas>
             <div class="container_presentacion animate__fadeInUp">
-                <p class="hero_tag">Costa Rica &nbsp;/&nbsp; <b>Full-Stack &amp; AI Agent Developer</b></p>
+                <p class="hero_tag" data-i18n="hero.tag">Costa Rica &nbsp;/&nbsp; <b>Full-Stack &amp; AI Agent Developer</b></p>
                 <h1 class="name">Jose<br>Hernandez</h1>
-                <p class="hero_role"><span class="prompt">&gt;</span><span id="typewriter"></span><span
-                        class="cursor"></span></p>
-                <p class="present">
-                    Desarrollador <b>full-stack</b> con más de 3 años programando. Hago el frontend, el backend en
-                    Python y el despliegue en AWS. Últimamente, casi todo mi tiempo va a construir <b>agentes de IA</b>
-                    y sistemas <b>RAG</b>.
+                <p class="hero_role"><span class="prompt">&gt;</span><span data-i18n="hero.role">AI Agent &amp; Full-Stack Developer</span></p>
+                <p class="present" data-i18n="hero.present">
+                    Construyo software de punta a punta: interfaces claras, APIs sólidas en Python y despliegues
+                    confiables en AWS. Hoy mi foco es llevar <b>agentes de IA</b> y sistemas <b>RAG</b> de la idea a
+                    producción — software que funciona en el mundo real, no demos.
                 </p>
                 <div class="hero_actions">
                     <a id="btn_cv"
                         href="https://drive.google.com/file/d/1zOFiI6scH-VWHzkvXR-R9mXrCzrMHuZt/view?usp=sharing"
-                        target="_blank" rel="noopener">descargar cv</a>
-                    <a class="btn_ghost" href="#project">ver proyectos</a>
+                        target="_blank" rel="noopener" data-i18n="hero.cvBtn">descargar cv</a>
+                    <a class="btn_ghost" href="#project" data-i18n="hero.projectsBtn">ver proyectos</a>
                 </div>
             </div>
         </section>
@@ -76,19 +90,18 @@
         <section id="about_me">
             <div class="sec-head">
                 <span class="sec-idx">(01)</span>
-                <h2 class="titulo">Sobre Mí</h2>
+                <h2 class="titulo" data-i18n="about.sectionTitle">Sobre Mí</h2>
                 <span class="sec-rule"></span>
             </div>
             <div class="about_grid">
-                <p id="description">
+                <p id="description" data-i18n="about.description">
                     ¡Hola! Soy <strong>José Alfredo Hernández Argüello</strong>, desarrollador <strong>Full
                         Stack</strong> costarricense con <span class="hl">más de 3 años de experiencia</span>
                     construyendo software de extremo a extremo. Empecé brindando <strong>soporte técnico en contact
                         centers</strong>, donde aprendí a resolver problemas bajo presión y a entender de verdad al
                     usuario final.
                     <br><br>
-                    Desde ahí evolucioné hacia el desarrollo de <strong>sistemas omnicanales</strong> y, más
-                    recientemente, a la creación de <span class="hl">agentes de inteligencia artificial</span>. Me
+                    Desde ahí evolucioné hacia la creación de <span class="hl">agentes de inteligencia artificial</span>. Me
                     especializo en backend con <strong>Python</strong> y <strong>C#/.NET</strong>, APIs con
                     <strong>FastAPI</strong> y agentes con <strong>LangChain / LangGraph</strong>, apoyado en un amplio
                     conocimiento de entornos <span class="hl">cloud (AWS) y Linux</span>.
@@ -107,10 +120,10 @@
                                 class="val">José Hernández</span></div>
                         <div class="row_t"><span class="key">role</span><span class="arrow">→</span><span
                                 class="val">Full Stack &amp; AI Agent Dev</span></div>
-                        <div class="row_t"><span class="key">exp</span><span class="arrow">→</span><span class="val">3+
-                                años</span></div>
+                        <div class="row_t"><span class="key">exp</span><span class="arrow">→</span><span class="val"
+                                data-i18n="term.exp.value">3+ años</span></div>
                         <div class="row_t"><span class="key">focus</span><span class="arrow">→</span><span
-                                class="val">Backend · IA · Cloud</span></div>
+                                class="val" data-i18n="term.focus.value">Backend · IA · Cloud</span></div>
                         <div class="row_t"><span class="key">stack</span><span class="arrow">→</span><span
                                 class="val">Python · C# · FastAPI · LangChain</span></div>
                         <div class="row_t"><span class="key">cloud</span><span class="arrow">→</span><span
@@ -124,117 +137,105 @@
         <section id="skills">
             <div class="sec-head">
                 <span class="sec-idx">(02)</span>
-                <h2 class="titulo">Habilidades</h2>
+                <h2 class="titulo" data-i18n="skills.sectionTitle">Habilidades</h2>
                 <span class="sec-rule"></span>
             </div>
-            <p id="description_skills">
+            <p id="description_skills" data-i18n="skills.description">
                 Stack con el que llevo una idea de la terminal a producción, con foco en <b>agentes de IA</b> y
                 sistemas <b>RAG</b>: orquestación con LangChain / LangGraph sobre AWS Bedrock, APIs en Python y
                 despliegue en cloud y Linux — sin descuidar el backend y el frontend de extremo a extremo.
             </p>
             <dl class="stack-list">
                 <div class="stack-row hot">
-                    <dt>IA / Agentes</dt>
+                    <dt data-i18n="skills.category.ai">IA / Agentes</dt>
                     <dd>
                         <span>LangChain</span><span>LangGraph</span><span>AWS Bedrock</span><span>AWS Agent Core</span>
                     </dd>
                 </div>
                 <div class="stack-row">
-                    <dt>Lenguajes</dt>
+                    <dt data-i18n="skills.category.langs">Lenguajes</dt>
                     <dd>
                         <span>Python</span><span>C#</span><span>JavaScript</span><span>SQL</span><span>HTML / CSS</span>
                     </dd>
                 </div>
                 <div class="stack-row">
-                    <dt>Frameworks</dt>
+                    <dt data-i18n="skills.category.frameworks">Frameworks</dt>
                     <dd><span>FastAPI</span><span>.NET</span></dd>
                 </div>
                 <div class="stack-row">
-                    <dt>Bases de datos</dt>
+                    <dt data-i18n="skills.category.databases">Bases de datos</dt>
                     <dd><span>PostgreSQL</span><span>MySQL</span><span>SQL Server</span><span>Pinecone</span></dd>
                 </div>
                 <div class="stack-row">
-                    <dt>Cloud / DevOps</dt>
+                    <dt data-i18n="skills.category.cloud">Cloud / DevOps</dt>
                     <dd><span>AWS</span><span>Docker</span><span>Nginx</span></dd>
                 </div>
                 <div class="stack-row">
-                    <dt>Sistemas Operativos</dt>
+                    <dt data-i18n="skills.category.os">Sistemas Operativos</dt>
                     <dd><span>Linux</span><span>Windows</span></dd>
                 </div>
                 <div class="stack-row">
-                    <dt>IDEs / Herramientas</dt>
-                    <dd><span>Claude Code</span><span>Git</span></dd>
+                    <dt data-i18n="skills.category.tools">IDEs / Herramientas</dt>
+                    <dd><span>Claude Code</span><span>Kiro</span><span>Git</span></dd>
                 </div>
             </dl>
 
-            <h3 class="certs_title">Certificaciones</h3>
+            <h3 class="certs_title" data-i18n="certs.title">Certificaciones</h3>
             <ul class="certs">
                 <li class="cert">
                     <span class="cert__idx">01</span>
                     <div class="cert__main">
-                        <span class="cert__name">Técnico en Programador de Aplicaciones Informáticas</span>
-                        <span class="cert__issuer">INA · Instituto Nacional de Aprendizaje, Costa Rica</span>
+                        <span class="cert__name" data-i18n="cert.ina.name">Técnico en Programador de Aplicaciones Informáticas</span>
+                        <span class="cert__issuer" data-i18n="cert.ina.issuer">INA · Instituto Nacional de Aprendizaje, Costa Rica</span>
                     </div>
-                    <span class="cert__date">20XX</span>
-                    <span class="cert__cred is-empty">sin credencial online</span>
+                    <div class="cert__side">
+                        <span class="cert__date" data-i18n="cert.ina.date">Dic 2023</span>
+                        <a class="cert__cred" href="certs/ina-programador-aplicaciones-informaticas-2023.pdf"
+                            download aria-label="Descargar certificación del INA (PDF)"
+                            data-i18n="cert.download" data-i18n-attr="aria-label:cert.ina.downloadLabel">descargar ↓</a>
+                    </div>
                 </li>
-                <li class="cert is-placeholder">
+                <li class="cert">
                     <span class="cert__idx">02</span>
                     <div class="cert__main">
-                        <span class="cert__name">AWS Cloud Essentials <span class="ph">placeholder</span></span>
-                        <span class="cert__issuer">Amazon Web Services</span>
+                        <span class="cert__name" data-i18n="cert.aws.name">AWS Cloud Practitioner Essentials</span>
+                        <span class="cert__issuer" data-i18n="cert.aws.issuer">Amazon Web Services</span>
                     </div>
-                    <span class="cert__date">20XX</span>
-                    <a class="cert__cred" href="#" aria-label="Ver credencial (placeholder)">ver credencial ↗</a>
+                    <div class="cert__side">
+                        <span class="cert__date" data-i18n="cert.aws.date">Jul 2026</span>
+                        <a class="cert__cred" href="certs/aws-cloud-practitioner-essentials-2026.pdf"
+                            download aria-label="Descargar certificación de AWS (PDF)"
+                            data-i18n="cert.download" data-i18n-attr="aria-label:cert.aws.downloadLabel">descargar ↓</a>
+                    </div>
                 </li>
                 <li class="cert is-placeholder">
                     <span class="cert__idx">03</span>
                     <div class="cert__main">
-                        <span class="cert__name">Certificación IA / Agentes <span class="ph">placeholder</span></span>
-                        <span class="cert__issuer">Entidad emisora</span>
+                        <span class="cert__name" data-i18n="cert.placeholder.name">Certificación IA / Agentes <span class="ph">placeholder</span></span>
+                        <span class="cert__issuer" data-i18n="cert.placeholder.issuer">Entidad emisora</span>
                     </div>
-                    <span class="cert__date">20XX</span>
-                    <a class="cert__cred" href="#" aria-label="Ver credencial (placeholder)">ver credencial ↗</a>
+                    <div class="cert__side">
+                        <span class="cert__date" data-i18n="cert.placeholder.date">20XX</span>
+                        <a class="cert__cred" href="#" aria-label="Ver credencial (placeholder)"
+                            data-i18n="cert.viewCredential" data-i18n-attr="aria-label:cert.placeholder.label">ver credencial ↗</a>
+                    </div>
                 </li>
             </ul>
         </section>
         <section id="project">
             <div class="sec-head">
                 <span class="sec-idx">(03)</span>
-                <h2 class="titulo">Proyectos</h2>
+                <h2 class="titulo" data-i18n="projects.sectionTitle">Proyectos</h2>
                 <span class="sec-rule"></span>
             </div>
             <div class="projects_grid">
 
                 <article class="project_card">
+                    <div class="project_topbar" aria-hidden="true"><span>atom-agent-ia</span><span>01</span></div>
                     <div class="project_media is-anim">
                         <svg class="atom-anim" viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" role="img"
                             focusable="false"
                             aria-label="Núcleo de un agente de IA con electrones orbitando — atom-agent-ia (Agent as a Service)">
-                            <style>
-                                .aai-orbit{fill:none;stroke:#454545;stroke-width:1.4}
-                                .aai-orbit.hi{stroke:#727272}
-                                .aai-electron{fill:#fff}
-                                .aai-core{fill:#fff}
-                                .aai-halo{fill:none;stroke:#fff;stroke-opacity:.22;stroke-width:1}
-                                .aai-pulse{fill:none;stroke:#fff;stroke-width:1.2;opacity:0;transform-box:view-box;transform-origin:180px 100px}
-                                .aai-spin{transform-box:view-box;transform-origin:180px 100px}
-                                .aai-o1{transform:rotate(0deg);animation:aai-s1 9s linear infinite}
-                                .aai-o2{transform:rotate(60deg);animation:aai-s2 12s linear infinite}
-                                .aai-o3{transform:rotate(120deg);animation:aai-s3 15s linear infinite}
-                                @keyframes aai-s1{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-                                @keyframes aai-s2{from{transform:rotate(60deg)}to{transform:rotate(420deg)}}
-                                @keyframes aai-s3{from{transform:rotate(120deg)}to{transform:rotate(-240deg)}}
-                                .aai-core{animation:aai-breathe 3.2s ease-in-out infinite}
-                                @keyframes aai-breathe{0%,100%{opacity:1}50%{opacity:.55}}
-                                .aai-pulse{animation:aai-ping 3.6s ease-out infinite}
-                                .aai-pulse.p2{animation-delay:1.8s}
-                                @keyframes aai-ping{0%{transform:scale(.35);opacity:.5}70%{opacity:0}100%{transform:scale(1.75);opacity:0}}
-                                @media (prefers-reduced-motion:reduce){
-                                    .aai-o1,.aai-o2,.aai-o3,.aai-core{animation:none}
-                                    .aai-pulse{display:none}
-                                }
-                            </style>
                             <circle class="aai-pulse" cx="180" cy="100" r="28" />
                             <circle class="aai-pulse p2" cx="180" cy="100" r="28" />
                             <g class="aai-spin aai-o1">
@@ -254,8 +255,8 @@
                         </svg>
                     </div>
                     <div class="project_body">
-                        <h3 class="project_title">atom-agent-ia</h3>
-                        <p class="project_desc">
+                        <h3 class="project_title" data-i18n="proj.atom.title">atom-agent-ia</h3>
+                        <p class="project_desc" data-i18n="proj.atom.desc">
                             Plataforma <strong>AaaS (Agent as a Service)</strong> construida con <strong>FastAPI</strong>
                             y <strong>LangChain</strong>: expone agentes de IA como servicio a través de una API, con
                             endpoints para ejecutar agentes, chatear, invocar herramientas y transmitir respuestas en
@@ -265,19 +266,23 @@
                             <span>Python</span><span>FastAPI</span><span>LangChain</span><span>AaaS</span>
                         </div>
                         <div class="project_links">
-                            <span class="project_private"><i class="fa-solid fa-lock"></i> Repo privado</span>
+                            <a href="projects/atom-agent-ia/index.html" class="detail_link" data-i18n="projects.detailLink"
+                                data-i18n-project-link="atom-agent-ia">Ver detalle →</a>
+                            <span class="project_private"><i class="fa-solid fa-lock"></i> <span
+                                    data-i18n="proj.atom.private">Repo privado</span></span>
                         </div>
                     </div>
                 </article>
 
                 <article class="project_card">
+                    <div class="project_topbar" aria-hidden="true"><span>gestion-casos-presupuestarios</span><span>02</span></div>
                     <div class="project_media">
-                        <img src="IMG/mobile sis.png"
+                        <img src="IMG/gestion-casos-presupuestarios-cover.png"
                             alt="Dashboard del sistema de Gestión de Casos Presupuestarios de A y M Consultores">
                     </div>
                     <div class="project_body">
-                        <h3 class="project_title">Gestión de Casos Presupuestarios</h3>
-                        <p class="project_desc">
+                        <h3 class="project_title" data-i18n="proj.casos.title">Gestión de Casos Presupuestarios</h3>
+                        <p class="project_desc" data-i18n="proj.casos.desc">
                             Sistema integral para la oficina contable <strong>A&amp;M Consultores</strong>, en
                             colaboración con Kelvin García. Desarrollado en <strong>C# / .NET</strong> con Entity
                             Framework, LINQ y SQL Server bajo arquitectura por capas, para el seguimiento de auditorías
@@ -287,28 +292,34 @@
                             <span>C#</span><span>.NET</span><span>EF</span><span>SQL Server</span>
                         </div>
                         <div class="project_links">
-                            <span class="project_private"><i class="fa-solid fa-lock"></i> Privado</span>
+                            <a href="projects/gestion-casos-presupuestarios/index.html" class="detail_link" data-i18n="projects.detailLink"
+                                data-i18n-project-link="gestion-casos-presupuestarios">Ver detalle →</a>
+                            <span class="project_private"><i class="fa-solid fa-lock"></i> <span
+                                    data-i18n="proj.casos.private">Privado</span></span>
                         </div>
                     </div>
                 </article>
 
                 <article class="project_card">
+                    <div class="project_topbar" aria-hidden="true"><span>portfolio-dev</span><span>03</span></div>
                     <div class="project_media">
-                        <img src="IMG/mobile (6).png" alt="Vista de escritorio del portfolio de Jose Hernandez">
+                        <img src="IMG/portfolio-dev-cover.png" alt="Vista de escritorio del portfolio de Jose Hernandez">
                     </div>
                     <div class="project_body">
-                        <h3 class="project_title">Portfolio Dev</h3>
-                        <p class="project_desc">
+                        <h3 class="project_title" data-i18n="proj.portfolio.title">Portfolio Dev</h3>
+                        <p class="project_desc" data-i18n="proj.portfolio.desc">
                             Este mismo portfolio: un sitio estático con enfoque <strong>brutalista monocromo</strong>
                             (inspiración techno), construido con HTML, CSS y JavaScript vanilla y desplegado en GitHub
                             Pages. En evolución constante conforme sumo proyectos y habilidades.
                         </p>
                         <div class="project_tags">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span>
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
                         </div>
                         <div class="project_links">
+                            <a href="projects/portfolio-dev/index.html" class="detail_link" data-i18n="projects.detailLink"
+                                data-i18n-project-link="portfolio-dev">Ver detalle →</a>
                             <a href="https://github.com/joseaha/joseaha.github.io" target="_blank"
-                                aria-label="Ver portfolio en GitHub"><i class="fa-brands fa-github"></i></a>
+                                aria-label="Ver portfolio en GitHub" data-i18n-attr="aria-label:proj.portfolio.githubLabel"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
                 </article>
@@ -316,40 +327,26 @@
             </div>
         </section>
         <section id="contact">
+            <div class="sec-head">
+                <span class="sec-idx">(04)</span>
+                <h2 class="titulo" data-i18n="contact.sectionTitle">Contacto</h2>
+                <span class="sec-rule"></span>
+            </div>
             <div class="contact_inner">
-                <div class="sec-head">
-                    <span class="sec-idx">(04)</span>
-                    <h2 class="titulo">Contacto</h2>
-                    <span class="sec-rule"></span>
-                </div>
-                <p class="contact_lead">Sentite libre de contactarme mediante el formulario y te responderé a la
-                    brevedad posible.</p>
-                <p class="contact_mail">
-                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                <p class="contact_lead" data-i18n="contact.lead">¿Tienes un proyecto o una vacante donde encaje? Escríbeme y te
+                    responderé a la brevedad posible.</p>
+                <div class="contact_mail">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                     <span>josedevcr@gmail.com</span>
-                </p>
-                <form class="contact_form" action="https://formsubmit.co/josedevcr@gmail.com" method="POST">
-                    <div class="field">
-                        <label for="name">Nombre</label>
-                        <input id="name" name="name" type="text">
-                    </div>
-                    <div class="field">
-                        <label for="mail">Correo electrónico</label>
-                        <input type="email" name="email" id="mail">
-                    </div>
-                    <div class="field">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </div>
-                    <button id="btnForm" type="submit">Enviar</button>
-                </form>
+                </div>
+                <a class="contact_btn" href="mailto:josedevcr@gmail.com" data-i18n="contact.mailBtn">Enviar correo</a>
             </div>
         </section>
     </main>
     <footer>
         <div class="footer_inner">
             <p class="footer_name">Jose Hernandez</p>
-            <p class="footer_tagline">Full Stack &amp; AI Agent Developer · Costa Rica</p>
+            <p class="footer_tagline" data-i18n="footer.tagline">Full Stack &amp; AI Agent Developer · Costa Rica</p>
             <div class="footer_socials">
                 <a href="https://github.com/joseaha" aria-label="GitHub" class="footer_social_link">
                     <i class="fa-brands fa-github" aria-hidden="true"></i>
@@ -358,19 +355,14 @@
                     class="footer_social_link">
                     <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.facebook.com/jose.jh.jaha" aria-label="Facebook" class="footer_social_link">
-                    <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.instagram.com/jose_hernandezupa/" aria-label="Instagram"
-                    class="footer_social_link">
-                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                </a>
             </div>
             <hr class="footer_hr">
-            <p class="footer_copy">© Copyright 2026. Hecho por Jose Hernandez Arguello</p>
+            <p class="footer_copy" data-i18n="footer.copy">© Copyright 2026. Hecho por Jose Hernandez Arguello</p>
         </div>
     </footer>
 </body>
+<script src="JS/i18n.js"></script>
+<script src="JS/theme.js"></script>
 <script src="JS/index.js"></script>
 
 </html>

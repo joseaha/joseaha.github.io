@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema integral para el seguimiento de auditorías presupuestarias de escuelas, de principio a fin.">
+    <title>Gestión de Casos Presupuestarios · Jose Hernandez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/project.css">
+    <link rel="icon" href="/IMG/dev.png">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+
+<body data-project-page="gestion-casos-presupuestarios">
+    <header>
+        <nav class="nav_font" aria-label="Navegación principal" data-i18n-attr="aria-label:nav.ariaLabel">
+            <div class="marca">
+                <a href="/index.html#home">Jose Hernandez</a>
+            </div>
+            <ul class="nav_lista" id="nav_lista">
+                <li class="nav_item"><a class="hvr-overline-from-center" href="/index.html#about_me" data-i18n="nav.about">Sobre Mí</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="/index.html#skills" data-i18n="nav.skills">Habilidades</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="/index.html#project" data-i18n="nav.projects">Proyectos</a></li>
+                <li class="nav_item"><a class="hvr-overline-from-center" href="/index.html#contact" data-i18n="nav.contact">Contactos</a></li>
+            </ul>
+            <div class="nav_tools">
+                <div class="lang_switch" role="group" aria-label="Idioma / Language">
+                    <button type="button" class="lang_btn" id="lang_es" data-lang="es" aria-current="true">ES</button>
+                    <button type="button" class="lang_btn" id="lang_en" data-lang="en" aria-current="false">EN</button>
+                </div>
+                <button type="button" class="theme_toggle" id="theme_toggle" aria-pressed="false"
+                    aria-label="Cambiar tema claro / oscuro">
+                    <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="checkbtn" id="nav_toggle" aria-expanded="false" aria-controls="nav_lista"
+                    aria-label="Abrir menú de navegación" data-i18n-attr="aria-label:nav.openLabel">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main id="contenedor_principal">
+        <a href="#top" class="to-top" aria-label="Volver arriba" data-i18n-attr="aria-label:toTop.label">
+            <i class="fa-solid fa-arrow-up fa-2xl" aria-hidden="true"></i>
+        </a>
+        <article class="project_detail" id="top">
+            <div class="project_detail_head">
+                <a class="back_link" href="/index.html#project" data-i18n="projects.backLink">← Proyectos</a>
+                <h1 class="project_detail_title">Gestión de Casos Presupuestarios</h1>
+                <p class="project_detail_subtitle">Sistema integral para el seguimiento de auditorías presupuestarias de escuelas, de principio a fin.</p>
+                <div class="project_detail_meta">
+                    <span><span class="meta_key" data-i18n="projectDetail.role">Rol</span> · Co-desarrollador (junto a Kelvin García)</span>
+                    <span><span class="meta_key" data-i18n="projectDetail.date">Fecha</span> · [PENDIENTE: completar]</span>
+                    <span><span class="meta_key" data-i18n="projectDetail.stack">Stack</span> · C# · .NET · Entity Framework · LINQ · SQL Server</span>
+                </div>
+                <div class="project_tags"><span>C#</span><span>.NET</span><span>EF</span><span>SQL Server</span></div>
+                <div class="project_detail_links"><span class="project_private"><i class="fa-solid fa-lock"></i> Privado</span></div>
+            </div>
+            <div class="project_detail_cover">
+                <img src="/IMG/gestion-casos-presupuestarios-cover.png" alt="Gestión de Casos Presupuestarios">
+            </div>
+            <div class="project_detail_body"><h2>Problema</h2>
+<p>La oficina contable <strong>A&amp;M Consultores</strong> llevaba el seguimiento de auditorías presupuestarias de escuelas de forma manual y dispersa, lo que dificultaba tener visibilidad del estado de cada caso y de las evidencias asociadas.</p>
+<h2>Solución</h2>
+<p>Un sistema integral desarrollado en <strong>C# / .NET</strong>, en colaboración con Kelvin García, para centralizar el seguimiento de auditorías presupuestarias de escuelas de principio a fin: registro de casos, control de estado y consulta de la información relevante para cada auditoría desde un solo dashboard.</p>
+<h2>Stack y arquitectura</h2>
+<ul>
+<li><strong>C# / .NET</strong> con <strong>Entity Framework</strong> y <strong>LINQ</strong> para el acceso a datos.</li>
+<li><strong>SQL Server</strong> como motor de base de datos.</li>
+<li><strong>Arquitectura por capas</strong>, separando la lógica de negocio del acceso a datos y de la presentación.</li>
+</ul>
+<h2>Retos</h2>
+<p>Modelar el ciclo de vida completo de una auditoría presupuestaria —con sus distintos estados y responsables— dentro de una arquitectura por capas mantenible, y coordinar el desarrollo en equipo con Kelvin García sobre una base de código compartida.</p>
+<h2>Resultados</h2>
+<p>[PENDIENTE: completar] — sistema en uso interno de A&amp;M Consultores; sin métricas públicas por tratarse de un proyecto privado.</p>
+</div>
+        </article>
+    </main>
+    <footer>
+        <div class="footer_inner">
+            <p class="footer_name">Jose Hernandez</p>
+            <p class="footer_tagline" data-i18n="footer.tagline">Full Stack &amp; AI Agent Developer · Costa Rica</p>
+            <div class="footer_socials">
+                <a href="https://github.com/joseaha" aria-label="GitHub" class="footer_social_link">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jose-alfredo-hernandez-arguello-jaha" aria-label="LinkedIn"
+                    class="footer_social_link">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.facebook.com/jose.jh.jaha" aria-label="Facebook" class="footer_social_link">
+                    <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/jose_hernandezupa/" aria-label="Instagram"
+                    class="footer_social_link">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+            <hr class="footer_hr">
+            <p class="footer_copy" data-i18n="footer.copy">© Copyright 2026. Hecho por Jose Hernandez Arguello</p>
+        </div>
+    </footer>
+</body>
+<script src="/JS/i18n.js"></script>
+<script src="/JS/theme.js"></script>
+<script src="/JS/index.js"></script>
+
+</html>
